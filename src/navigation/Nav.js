@@ -1,17 +1,19 @@
-import React from "react";
+import React, { Component } from 'react';
 
-import "./nav.css"
+import './nav.css'
 
-function Nav() {
-  return (
-    <nav>
+class Nav extends Component {
+  render() {
+    return (
+      <nav>
         <ul>
-            <li>About</li>
-            <li>Projects</li>
-            <li>Contact</li>
+          <li>About</li>
+          <li>Projects</li>
+          <li>Contact</li>
         </ul>
-    </nav>
-  );
+      </nav>
+    );
+  }
 }
 
 export default Nav;

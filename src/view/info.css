@@ -1,18 +1,68 @@
 @import url('../styleVariables.css');
 
 div#info {
-    position: relative;
-    display: block;
-    width: 60vw;
-    margin: 45vh 20vw;
-    border: solid var(--accent-color) 5px;
-    border-radius: 3em;
-    overflow: hidden;
+  position: relative;
+  display: block;
+  width: 70vw;
+  height: 40vh;
+  margin: 30vh 15vw;
+  border: solid var(--light) 5px;
+  border-radius: 3em;
+  background: radial-gradient(ellipse at bottom left, var(--accent), transparent);
 }
 
 div#info > img {
-    position: relative;
-    left: 10px;
-    bottom: -5px;
-    width: 20vw;
+  position: absolute;
+  left: calc(15% - 20vh);
+  bottom: -5px;
+  max-width: 22em;
+  max-height: 40vh;
+}
+
+div#info > div#infoButtons {
+  position: absolute;
+  top: 1.5em;
+  right: 5em;
+}
+
+div#info > div#infoButtons > button {
+  position: relative;
+  display: inline-block;
+  border: 0;
+  background: none;
+  padding: 5px;
+  margin-left: 3px;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+div#info > div#personalBox {
+  position: absolute;
+  right: 5em;
+  top: 5em;
+  bottom: 2em;
+  width: 50%;
+  border-bottom: 1px solid white;
+}
+
+div#info > div#personalBox > div#infoContainer {
+  position: absolute;
+  width: 200%;
+  top: 0;
+  bottom: 0;
+  transition: left 0.5s;
+}
+
+div#info > div#personalBox > div#infoContainer > div {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  padding: 0.5em;
+  overflow-y: scroll;
+}
+
+div#info > div#personalBox > div#infoContainer > div#infoBox > p {
+  text-indent: 1em;
+  margin-bottom: 0.2em;
 }

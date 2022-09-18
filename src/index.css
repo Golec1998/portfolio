@@ -1,15 +1,37 @@
 @import url('./styleVariables.css');
 
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #333333;
+  border: 2px solid var(--light);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border: 4px solid var(--light);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--light);
+}
+
 * {
-    color: var(--main-color);
-    font-family: Inter;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
+  color: var(--light);
+  font-family: Inter;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 html, body {
-    background: var(--background-color);
-    width: 100vw;
+  background: var(--darker);
+  width: 100vw;
+}
+
+html {
+  overflow-y: scroll;
 }

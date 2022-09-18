@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-import "./main.css"
+import './main.css'
 
-function Main() {
+class Main extends Component {
+  render() {
     return (
-        <div id='main'>
-            <h1>Paweł Cebula<span>_</span></h1>
-            <h3>Web developer</h3>
-        </div>
+      <div id='main'>
+        <h1>Paweł Cebula<span>_</span></h1>
+        <h3>Web developer</h3>
+      </div>
     )
+  }
 }
 
 export default Main;
