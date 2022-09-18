@@ -1,0 +1,41 @@
+div.skill {
+  display: flex;
+  width: 100%;
+  align-content: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+div.skill > * {
+  display: inline-block;
+}
+
+div.skill > p.skillName {
+  width: 35%;
+}
+
+div.skill > div.skillScore {
+  display: inline-flex;
+  width: 30%;
+  height: 1.1em;
+  margin-right: 5px;
+  border: 3px solid white;
+  border-radius: 0.5em;
+  align-content: center;
+}
+
+div.skill > div.skillScore > div {
+  display: block;
+  width: 16%;
+  height: 0.4em;
+  border-radius: 0.2em;
+  margin: 2%;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+div.skill > div.skillScore > div:nth-child(1) { background: #0ff; }
+div.skill > div.skillScore > div:nth-child(2) { background: #0f0; }
+div.skill > div.skillScore > div:nth-child(3) { background: #ff0; }
+div.skill > div.skillScore > div:nth-child(4) { background: #f70; }
+div.skill > div.skillScore > div:nth-child(5) { background: #f00; }

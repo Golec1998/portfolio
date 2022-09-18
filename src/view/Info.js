@@ -6,6 +6,8 @@ import photo from '../media/image/photo_alpha.png'
 
 class Info extends Component {
 
+  skillsShown = false;
+
   selectInfo = () => {
     document.getElementById('infoContainer').style.left = '0';
     document.getElementById('selectInfoButton').style.border = '3px solid white';
@@ -16,10 +18,23 @@ class Info extends Component {
     document.getElementById('infoContainer').style.left = '-100%';
     document.getElementById('selectSkillsButton').style.border = '3px solid white';
     document.getElementById('selectInfoButton').style.border = '3px solid transparent';
+    if(!this.skillsShown) this.appearSkills();
   }
 
   appearInfo = () => {
+    
+  }
 
+  appearSkills = () => {
+    this.skillsShown = true;
+    let skills = document.getElementsByClassName('skill');
+    for(let i = 0; i < skills.length; i++)
+      setTimeout( () => {
+        skills[i].style.opacity = 1;
+        let dots = skills[i].getElementsByClassName('skillScore')[0].getElementsByTagName('div');
+        for(let j = 0; j < dots.length; j++)
+          setTimeout( () => { dots[j].style.opacity = 1; },  250 * j + 500);
+      } , i * 250 + 500)
   }
 
   componentDidMount() {
@@ -43,7 +58,7 @@ class Info extends Component {
               <p>Tempore animi beatae reprehenderit facilis! Veritatis ab iure fuga corporis voluptate consequuntur laudantium, assumenda facere deserunt, cumque deleniti omnis id laborum optio eos, explicabo itaque sunt maiores consequatur et culpa?</p>
             </div>
             <div id='skillsBox'>
-              <SkillBox />
+              <SkillBox skillName='React.JS' skillLvl='2'/>
             </div>
           </div>
         </div>

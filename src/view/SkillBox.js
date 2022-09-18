@@ -1,26 +1,32 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import './skillBox.css'
 
-class SkillBox extends Component {
+const skillBox = (props) => {
   
-  skillName = '';
+  const skillLvls = ['starting', 'beginner', 'junior', 'regular', 'senior'];
 
-  componentDidMount() {
-    this.skillName = 'Skill';
+  // const appearLvl = () => {
+  //   let skills = document.getElementsByClassName('skill');
+  //   let dots = skill.getElementsByClassName('skillScore')[0].getElementsByTagName('div');
+  //   for(let i = 0; i < 5; i++)
+  //     setTimeout(() => { dots[i].style.opacity = 1 }, i * 100);
+  // }
+
+  const createDots = () => {
+    for(let i = 0; i < parseInt(props.skillLvl); i++) React.createElement('div', null, '')
   }
 
-  render() {
-    return(
-      <div className='skill'>
-        <p>{this.skillName}</p>
-        <div className="skillScore">
-          <div></div><div></div><div></div><div></div><div></div><div></div>
-        </div>
+  return(
+    <div className='skill'>
+      <p className='skillName'>{props.skillName}</p>
+      <div className="skillScore">
+        {createDots}
       </div>
-    )
-  }
+      <p>{skillLvls[props.skillLvl - 1]}</p>
+    </div>
+  )
 
 }
 
-export default SkillBox;
+export default skillBox;
