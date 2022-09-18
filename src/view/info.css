@@ -1,0 +1,18 @@
+@import url('../styleVariables.css');
+
+div#info {
+    position: relative;
+    display: block;
+    width: 60vw;
+    margin: 45vh 20vw;
+    border: solid var(--accent-color) 5px;
+    border-radius: 3em;
+    overflow: hidden;
+}
+
+div#info > img {
+    position: relative;
+    left: 10px;
+    bottom: -5px;
+    width: 20vw;
+}

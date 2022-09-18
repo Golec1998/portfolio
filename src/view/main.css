@@ -1,0 +1,34 @@
+@import url('../styleVariables.css');
+
+div#main {
+    position: relative;
+    display: block;
+    width: 60vw;
+    margin: 45vh 20vw;
+}
+
+div#main > h1,
+div#main > h3 {
+    margin: 0;
+}
+
+div#main > h1 {
+    font-size: 4em;
+}
+
+div#main > h3 {
+    font-size: 1.5em;
+}
+
+div#main > h1 > span {
+    animation: underscoreBlink 1s infinite;
+    animation-iteration-count: infinite;
+}
+
+@keyframes underscoreBlink {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    50% { opacity: 1; }
+    60% { opacity: 0; }
+    100% { opacity: 0; }
+}
