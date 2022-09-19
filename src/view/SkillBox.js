@@ -2,7 +2,7 @@ import React from 'react';
 
 import './skillBox.css'
 
-const skillBox = (props) => {
+const SkillBox = (props) => {
   
   const skillLvls = ['starting', 'beginner', 'junior', 'regular', 'senior'];
 
@@ -13,15 +13,17 @@ const skillBox = (props) => {
   //     setTimeout(() => { dots[i].style.opacity = 1 }, i * 100);
   // }
 
-  const createDots = () => {
-    for(let i = 0; i < parseInt(props.skillLvl); i++) React.createElement('div', null, '')
-  }
+  // const createDots = () => {
+  //   for(let i = 0; i < parseInt(props.skillLvl); i++) React.createElement('div', null, '')
+  // }
+
+  const dots = Array.from({length: props.skillLvl}, () => {return <div></div>});
 
   return(
     <div className='skill'>
       <p className='skillName'>{props.skillName}</p>
-      <div className="skillScore">
-        {createDots}
+      <div className='skillScore'>
+        {dots}
       </div>
       <p>{skillLvls[props.skillLvl - 1]}</p>
     </div>
@@ -29,4 +31,4 @@ const skillBox = (props) => {
 
 }
 
-export default skillBox;
+export default SkillBox;

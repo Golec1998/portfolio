@@ -1,0 +1,30 @@
+[
+  {
+    "name": "HTML",
+    "lvl": 3
+  },
+  {
+    "name": "CSS",
+    "lvl": 3
+  },
+  {
+    "name": "React.JS",
+    "lvl": 2
+  },
+  {
+    "name": "TypeScript",
+    "lvl": 2
+  },
+  {
+    "name": "Node.JS",
+    "lvl": 1
+  },
+  {
+    "name": "MySQL",
+    "lvl": 3
+  },
+  {
+    "name": "Figma",
+    "lvl": 2
+  }
+]

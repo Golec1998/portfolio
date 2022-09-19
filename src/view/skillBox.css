@@ -4,6 +4,7 @@ div.skill {
   align-content: center;
   opacity: 0;
   transition: opacity 0.5s;
+  margin-bottom: 0.5em;
 }
 
 div.skill > * {
@@ -21,7 +22,7 @@ div.skill > div.skillScore {
   margin-right: 5px;
   border: 3px solid white;
   border-radius: 0.5em;
-  align-content: center;
+  align-items: center;
 }
 
 div.skill > div.skillScore > div {
@@ -29,7 +30,7 @@ div.skill > div.skillScore > div {
   width: 16%;
   height: 0.4em;
   border-radius: 0.2em;
-  margin: 2%;
+  margin: 0 2%;
   opacity: 0;
   transition: opacity 0.5s;
 }

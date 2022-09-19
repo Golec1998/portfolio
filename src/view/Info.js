@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import SkillBox from './SkillBox'
 
+import SkillsJSON from '../media/data/skills.json'
+
 import './info.css'
 import photo from '../media/image/photo_alpha.png'
 
@@ -19,10 +21,6 @@ class Info extends Component {
     document.getElementById('selectSkillsButton').style.border = '3px solid white';
     document.getElementById('selectInfoButton').style.border = '3px solid transparent';
     if(!this.skillsShown) this.appearSkills();
-  }
-
-  appearInfo = () => {
-    
   }
 
   appearSkills = () => {
@@ -58,7 +56,11 @@ class Info extends Component {
               <p>Tempore animi beatae reprehenderit facilis! Veritatis ab iure fuga corporis voluptate consequuntur laudantium, assumenda facere deserunt, cumque deleniti omnis id laborum optio eos, explicabo itaque sunt maiores consequatur et culpa?</p>
             </div>
             <div id='skillsBox'>
-              <SkillBox skillName='React.JS' skillLvl='2'/>
+              {
+                SkillsJSON.map((skill) => {
+                  return <SkillBox skillName={skill.name} skillLvl={skill.lvl} />
+                })
+              }
             </div>
           </div>
         </div>
