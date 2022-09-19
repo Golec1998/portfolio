@@ -20,7 +20,7 @@ div#main > h3 {
   font-size: 1.5em;
 }
 
-div#main > h1 > span {
+div#main > h1 > span.blink {
   animation: underscoreBlink 1s infinite;
   animation-iteration-count: infinite;
 }

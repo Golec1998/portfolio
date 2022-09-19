@@ -3,6 +3,16 @@
 :root {
     --darker: #212121;
     --dark: #333333;
-    --light: white;
+    --light: #878787;
     --accent: #720000;
 }
+
+.darkerBg { background: var(--darker); }
+.darkBg { background: var(--dark); }
+.lightBg { background: var(--light); }
+.accentBg { background: var(--accent); }
+
+.darkerTxt { color: var(--darker); }
+.darkTxt { color: var(--dark); }
+.lightTxt { color: var(--light); }
+.accentTxt { color: var(--accent); }

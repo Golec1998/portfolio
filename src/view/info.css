@@ -6,12 +6,23 @@ div#info {
   width: 70vw;
   height: 40vh;
   margin: 30vh 15vw;
-  border: solid var(--light) 5px;
-  border-radius: 3em;
+  border-left: solid white 5px;
+  border-bottom: solid white 5px;
+  border-radius: 0 0 0 3em;
   background: radial-gradient(ellipse at bottom left, var(--accent), transparent);
 }
 
-div#info > img {
+div#info > div#photo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  opacity: 0;
+  transition: all 1s;
+}
+
+div#info > div#photo > img {
   position: absolute;
   left: calc(15% - 20vh);
   bottom: -5px;
@@ -23,6 +34,7 @@ div#info > div#infoButtons {
   position: absolute;
   top: 1.5em;
   right: 5em;
+  transition: all 1s;
 }
 
 div#info > div#infoButtons > button {
@@ -42,7 +54,8 @@ div#info > div#personalBox {
   top: 5em;
   bottom: 2em;
   width: 50%;
-  border-bottom: 1px solid white;
+  border-bottom: 2px solid white;
+  transition: all 1s;
 }
 
 div#info > div#personalBox > div#infoContainer {
@@ -59,7 +72,7 @@ div#info > div#personalBox > div#infoContainer > div {
   width: 50%;
   height: 100%;
   padding: 0.5em;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 div#info > div#personalBox > div#infoContainer > div#infoBox > p {
