@@ -41,7 +41,7 @@ class Info extends Component {
     let main = document.getElementById('main');
     let mainStyles = window.getComputedStyle(main);
     let height = (parseFloat(mainStyles['marginTop']) + parseFloat(mainStyles['marginBottom']) + parseFloat(mainStyles['height'])) * 0.8;
-  
+
     if(y < height) {
       let pos = parseInt((y / height) * 50);
       
