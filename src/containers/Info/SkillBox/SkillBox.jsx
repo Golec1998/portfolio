@@ -6,7 +6,7 @@ const SkillBox = (props) => {
   
   const skillLvls = ['starting', 'beginner', 'junior', 'regular', 'senior'];
 
-  const dots = Array.from({length: props.skillLvl}, (index) => {return <div></div>});
+  const dots = Array.from({length: props.skillLvl}, (_, index) => {return <div key={(index + props.skillName)}></div>});
 
   return(
     <div className='skill'>

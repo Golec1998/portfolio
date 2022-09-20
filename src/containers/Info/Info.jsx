@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
-import SkillBox from './SkillBox'
+import InfoBox from './InfoBox/InfoBox'
+import EducationBox from './EducationBox/EducationBox'
+import SkillBox from './SkillBox/SkillBox'
 
-import SkillsJSON from '../media/data/skills.json'
+import SkillsJSON from '../../media/data/skills.json'
 
 import './info.css'
-import photo from '../media/image/photo_alpha.png'
+import photo from '../../media/image/photo_alpha.png'
 
 class Info extends Component {
 
@@ -12,14 +14,23 @@ class Info extends Component {
 
   selectInfo = () => {
     document.getElementById('infoContainer').style.left = '0';
+    for(let i = 0; i < 3; i++)
+      document.getElementById('infoButtons').getElementsByTagName('button')[i].style.border = '3px solid transparent';
     document.getElementById('selectInfoButton').style.border = '3px solid white';
-    document.getElementById('selectSkillsButton').style.border = '3px solid transparent';
+  }
+
+  selectEducation = () => {
+    document.getElementById('infoContainer').style.left = '-100%';
+    for(let i = 0; i < 3; i++)
+      document.getElementById('infoButtons').getElementsByTagName('button')[i].style.border = '3px solid transparent';
+    document.getElementById('selectEducationButton').style.border = '3px solid white';
   }
 
   selectSkills = () => {
-    document.getElementById('infoContainer').style.left = '-100%';
+    document.getElementById('infoContainer').style.left = '-200%';
+    for(let i = 0; i < 3; i++)
+      document.getElementById('infoButtons').getElementsByTagName('button')[i].style.border = '3px solid transparent';
     document.getElementById('selectSkillsButton').style.border = '3px solid white';
-    document.getElementById('selectInfoButton').style.border = '3px solid transparent';
     if(!this.skillsShown) this.appearSkills();
   }
 
@@ -54,7 +65,7 @@ class Info extends Component {
       document.getElementById('infoButtons').style.right = `calc(5em + ${pos - 50}%)`;
       document.getElementById('infoButtons').style.opacity = `${pos / 100.}`;
 
-      console.log(pos);
+      //console.log(pos);
     }
     else {
       document.getElementById('photo').style.left = `0%`;
@@ -83,16 +94,13 @@ class Info extends Component {
         </div>
         <div id='infoButtons'>
           <button id='selectInfoButton' onClick={this.selectInfo}>Info</button>
+          <button id='selectEducationButton' onClick={this.selectEducation}>Education</button>
           <button id='selectSkillsButton' onClick={this.selectSkills}>Skills</button>
         </div>
         <div id='personalBox'>
           <div id='infoContainer'>
-            <div id='infoBox'>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum nulla et officia? Ad beatae sit excepturi nam, at consectetur atque provident in enim tempore aspernatur nisi delectus veniam neque reiciendis?</p>
-              <p>Quam quos perspiciatis aliquid maiores modi pariatur, enim odio voluptates accusamus commodi optio ut consectetur in asperiores ratione rerum quae, mollitia ea obcaecati. Autem deserunt sit esse reprehenderit molestiae veritatis?</p>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, id quos velit neque perferendis ipsum ab enim, veritatis voluptatum tempora quod. Nobis odio quos porro quam ad, distinctio, rem quisquam alias, magni nam vel similique beatae voluptatum qui tempore consectetur perferendis voluptas laboriosam ab ipsum iure illum. Tenetur reiciendis quod quisquam, dolore, provident sint alias molestiae, quia labore cupiditate aspernatur.</p>
-              <p>Tempore animi beatae reprehenderit facilis! Veritatis ab iure fuga corporis voluptate consequuntur laudantium, assumenda facere deserunt, cumque deleniti omnis id laborum optio eos, explicabo itaque sunt maiores consequatur et culpa?</p>
-            </div>
+            <InfoBox />
+            <EducationBox />
             <div id='skillsBox'>
               {
                 SkillsJSON.map((skill) => {

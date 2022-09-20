@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Nav from './navigation/Nav';
-import Main from './view/Main';
-import Info from './view/Info';
+import Nav from '../../components/Nav/Nav';
+import Main from '../Main/Main';
+import Info from '../Info/Info';
 
-import './index.css'
+import '../../index.css'
 
 class App extends Component {
   render() {

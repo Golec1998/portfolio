@@ -1,15 +1,12 @@
-@import url('../styleVariables.css');
-
 div#info {
   position: relative;
   display: block;
   width: 70vw;
-  height: 40vh;
-  margin: 30vh 15vw;
-  border-left: solid white 5px;
-  border-bottom: solid white 5px;
-  border-radius: 0 0 0 3em;
-  background: radial-gradient(ellipse at bottom left, var(--accent), transparent);
+  height: 50vh;
+  margin: 25vh 15vw;
+  border: solid white 5px;
+  border-radius: 3em;
+  background: radial-gradient(ellipse at bottom left, var(--accent-transparent), transparent);
 }
 
 div#info > div#photo {
@@ -24,10 +21,10 @@ div#info > div#photo {
 
 div#info > div#photo > img {
   position: absolute;
-  left: calc(15% - 20vh);
+  left: calc(15% - 25vh);
   bottom: -5px;
-  max-width: 22em;
-  max-height: 40vh;
+  max-width: 26em;
+  max-height: 50vh;
 }
 
 div#info > div#infoButtons {
@@ -60,7 +57,7 @@ div#info > div#personalBox {
 
 div#info > div#personalBox > div#infoContainer {
   position: absolute;
-  width: 200%;
+  width: 300%;
   top: 0;
   bottom: 0;
   transition: left 0.5s;
@@ -69,13 +66,8 @@ div#info > div#personalBox > div#infoContainer {
 div#info > div#personalBox > div#infoContainer > div {
   position: relative;
   display: inline-block;
-  width: 50%;
+  width: calc(100% / 3);
   height: 100%;
   padding: 0.5em;
   overflow-y: auto;
-}
-
-div#info > div#personalBox > div#infoContainer > div#infoBox > p {
-  text-indent: 1em;
-  margin-bottom: 0.2em;
 }

@@ -5,6 +5,7 @@
     --dark: #333333;
     --light: #878787;
     --accent: #720000;
+    --accent-transparent: #72000044;
 }
 
 .darkerBg { background: var(--darker); }

@@ -1,3 +1,7 @@
+div#skillBox {
+  width: calc(100% / 3);
+}
+
 div.skill {
   display: flex;
   width: 100%;
