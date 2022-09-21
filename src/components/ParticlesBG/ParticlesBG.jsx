@@ -127,7 +127,7 @@ class ParticlesBG extends Component {
                   },
                   'retina_detect': true,
                   'background': {
-                      'color': '#1110',
+                      'color': '#212121',
                       'image': '',
                       'position': '50% 50%',
                       'repeat': 'no-repeat',
