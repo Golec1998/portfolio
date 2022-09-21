@@ -3,12 +3,12 @@ import InfoBox from './InfoBox/InfoBox'
 import EducationBox from './EducationBox/EducationBox'
 import SkillBox from './SkillBox/SkillBox'
 
-import SkillsJSON from '../../media/data/skills.json'
+import SkillsJSON from '../../../media/data/skills.json'
 
-import './info.css'
-import photo from '../../media/image/photo_alpha.png'
+import './about.css'
+import photo from '../../../media/images/photo_alpha.png'
 
-class Info extends Component {
+class About extends Component {
 
   skillsShown = false;
 
@@ -116,4 +116,4 @@ class Info extends Component {
 
 }
 
-export default Info;
+export default About;

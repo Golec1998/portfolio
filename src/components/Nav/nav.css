@@ -1,12 +1,69 @@
 ul {
   list-style-type: none;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: fixed;
-  right: 20vw;
+  left: -50em;
   top: 0;
+  bottom: 0;
+  width: 20em;
+  background: var(--accent);
+  transition-duration: 0.5s;
+  border-right: 5px solid white;
+}
+
+ul.menuShown {
+  left: -15em;
+}
+
+ul:hover {
+  left: -2em;
 }
 
 ul > li {
-  margin: 20px;
   font-size: 1.2em;
+  position: relative;
+  height: 3em;
+}
+
+ul > li > div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 4em;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+ul > li > div:hover {
+  left: 1em;
+}
+
+ul > li > div > div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+ul > li > div > div > img {
+  width: 2em;
+  margin: 0.5em 1em;
+  filter: invert(100%);
+  transition-duration: 0.5s;
+}
+
+ul > li > div.menuButtonActive {
+  background: white;
+}
+
+ul > li > div.menuButtonActive > div {
+  color: black;
+}
+
+ul > li > div.menuButtonActive > div > img {
+  filter: invert(0%);
 }

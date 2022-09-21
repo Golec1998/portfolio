@@ -1,20 +1,28 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+
+import Body from '../Body/Body'
+
 import Nav from '../../components/Nav/Nav';
-import Main from '../Main/Main';
-import Info from '../Info/Info';
 
 import '../../index.css'
+import ParticlesBG from '../../components/ParticlesBG/ParticlesBG';
 
 class App extends Component {
+
   render() {
+
     return(
-      <div>
+      <Fragment>
+        <ParticlesBG />
+
+        <Body />
+
         <Nav />
-        <Main />
-        <Info />
-      </div>
+      </Fragment>
     );
+
   }
+
 }
 
 export default App;

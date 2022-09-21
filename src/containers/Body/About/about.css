@@ -1,9 +1,9 @@
 div#info {
   position: relative;
   display: block;
-  width: 70vw;
+  width: 65vw;
   height: 50vh;
-  margin: 25vh 15vw;
+  margin: 25vh 15vw 25vh 20vw;
   border: solid white 5px;
   border-radius: 3em;
   background: radial-gradient(ellipse at bottom left, var(--accent-transparent), transparent);
@@ -43,6 +43,7 @@ div#info > div#infoButtons > button {
   margin-left: 3px;
   font-size: 1.2em;
   font-weight: 700;
+  cursor: pointer;
 }
 
 div#info > div#personalBox {

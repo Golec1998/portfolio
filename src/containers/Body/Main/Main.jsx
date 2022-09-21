@@ -5,22 +5,29 @@ import './main.css'
 class Main extends Component {
 
   state = {
-    header: '',
-    headerLength: 0,
+    header: '>',
+    headerLength: 1,
     h3style: {
       opacity: '0'
     }
   }
 
-  headerText = 'Paweł Cebula'.split('');
+  headerText = '>Paweł Cebula'.split('');
 
   componentDidMount() {
+    if(window.scrollY > 0) {
+      document.getElementById('menu').classList.add('menuShown');
+      document.getElementsByTagName('html')[0].style.overflowY = 'scroll';
+    }
+
     setTimeout(() => {
       setInterval(() => {
         if(this.state.headerLength >= this.headerText.length)
         {
           clearInterval(this);
           this.setState({ h3style: { opacity: 1, transition: 'all 2s' } });
+          document.getElementById('menu').classList.add('menuShown');
+          document.getElementsByTagName('html')[0].style.overflowY = 'scroll';
         }
         let headerLength = this.state.headerLength + 1;
         this.setState({
@@ -28,7 +35,7 @@ class Main extends Component {
           headerLength: headerLength
         })
       }, 250);
-    }, 750);
+    }, 1000);
   }
 
   render() {

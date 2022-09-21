@@ -33,7 +33,7 @@ html, body {
 }
 
 html {
-  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 div#root > div {
