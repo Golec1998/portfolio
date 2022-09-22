@@ -1,0 +1,7 @@
+div#contact {
+  display: block;
+  height: 70vh;
+  width: calc(70vw - 5em);
+  margin: 15vh 15vw 15vh calc(15vw + 5em);
+  border: 1px solid white;
+}

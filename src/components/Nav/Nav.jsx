@@ -11,33 +11,56 @@ class Nav extends Component {
     let buttons = document.getElementsByClassName('menuButton');
     for(let i = 0; i < buttons.length; i++)
       buttons[i].classList.remove('menuButtonActive');
-    if(view != 'x') {
+    if(view !== 'x') {
       document.getElementById(view + 'Button').classList.add('menuButtonActive');
     }
   }
 
   scrollTo = (view) => {
     let main = document.getElementById('main');
+    let about = document.getElementById('about');
+    let projects = document.getElementById('projects');
+
     let mainStyles = window.getComputedStyle(main);
-    let height = (parseFloat(mainStyles['marginTop']) + parseFloat(mainStyles['marginBottom']) + parseFloat(mainStyles['height']));
-    window.scrollTo(0, view * height);
+    let aboutStyles = window.getComputedStyle(about);
+    let projectsStyles = window.getComputedStyle(projects);
+
+    let mainHeight = (parseFloat(mainStyles['marginTop']) + parseFloat(mainStyles['marginBottom']) + parseFloat(mainStyles['height']));
+    let aboutHeight = (parseFloat(aboutStyles['marginTop']) + parseFloat(aboutStyles['marginBottom']) + parseFloat(aboutStyles['height']));
+    let projectsHeight = (parseFloat(projectsStyles['marginTop']) + parseFloat(projectsStyles['marginBottom']) + parseFloat(projectsStyles['height']));
+
+    switch(view) {
+      case 1: window.scrollTo(0, mainHeight); break;
+      case 2: window.scrollTo(0, mainHeight + aboutHeight); break;
+      case 3: window.scrollTo(0, mainHeight + aboutHeight + projectsHeight); break;
+      default: break;
+    }
   }
 
   componentDidMount() {
     window.addEventListener('scroll', () => {
       let main = document.getElementById('main');
+      let about = document.getElementById('about');
+      let projects = document.getElementById('projects');
+
       let mainStyles = window.getComputedStyle(main);
-      let height = (parseFloat(mainStyles['marginTop']) + parseFloat(mainStyles['marginBottom']) + parseFloat(mainStyles['height']));
+      let aboutStyles = window.getComputedStyle(about);
+      let projectsStyles = window.getComputedStyle(projects);
+
+      let mainHeight = (parseFloat(mainStyles['marginTop']) + parseFloat(mainStyles['marginBottom']) + parseFloat(mainStyles['height']));
+      let aboutHeight = (parseFloat(aboutStyles['marginTop']) + parseFloat(aboutStyles['marginBottom']) + parseFloat(aboutStyles['height']));
+      let projectsHeight = (parseFloat(projectsStyles['marginTop']) + parseFloat(projectsStyles['marginBottom']) + parseFloat(projectsStyles['height']));
 
       let breakpointValue = 0.75;
 
-      this.selectView('x');
-      if(window.scrollY > height * breakpointValue)
-        this.selectView('about');
-      if(window.scrollY > height * (breakpointValue + 1))
-        this.selectView('projects');
-      if(window.scrollY > height * (breakpointValue + 2))
+      if(window.scrollY > mainHeight + aboutHeight + projectsHeight * breakpointValue)
         this.selectView('contact');
+      else if(window.scrollY > mainHeight + aboutHeight * breakpointValue)
+        this.selectView('projects');
+      else if(window.scrollY > mainHeight * breakpointValue)
+        this.selectView('about');
+      else
+        this.selectView('x');
     });
   }
 

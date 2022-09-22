@@ -1,15 +1,15 @@
-div#info {
+div#about {
   position: relative;
   display: block;
-  width: 65vw;
+  width: calc(70vw - 5em);
   height: 50vh;
-  margin: 25vh 15vw 25vh 20vw;
+  margin: 25vh 15vw 25vh calc(15vw + 5em);
   border: solid white 5px;
   border-radius: 3em;
   background: radial-gradient(ellipse at bottom left, var(--accent-transparent), transparent);
 }
 
-div#info > div#photo {
+div#about > div#photo {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -19,7 +19,7 @@ div#info > div#photo {
   transition: all 1s;
 }
 
-div#info > div#photo > img {
+div#about > div#photo > img {
   position: absolute;
   left: calc(15% - 25vh);
   bottom: -5px;
@@ -27,14 +27,14 @@ div#info > div#photo > img {
   max-height: 50vh;
 }
 
-div#info > div#infoButtons {
+div#about > div#infoButtons {
   position: absolute;
   top: 1.5em;
   right: 5em;
   transition: all 1s;
 }
 
-div#info > div#infoButtons > button {
+div#about > div#infoButtons > button {
   position: relative;
   display: inline-block;
   border: 0;
@@ -46,7 +46,7 @@ div#info > div#infoButtons > button {
   cursor: pointer;
 }
 
-div#info > div#personalBox {
+div#about > div#personalBox {
   position: absolute;
   right: 5em;
   top: 5em;
@@ -56,7 +56,7 @@ div#info > div#personalBox {
   transition: all 1s;
 }
 
-div#info > div#personalBox > div#infoContainer {
+div#about > div#personalBox > div#infoContainer {
   position: absolute;
   width: 300%;
   top: 0;
@@ -64,7 +64,7 @@ div#info > div#personalBox > div#infoContainer {
   transition: left 0.5s;
 }
 
-div#info > div#personalBox > div#infoContainer > div {
+div#about > div#personalBox > div#infoContainer > div {
   position: relative;
   display: inline-block;
   width: calc(100% / 3);

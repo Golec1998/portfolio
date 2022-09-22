@@ -88,7 +88,7 @@ class About extends Component {
 
   render() {
     return (
-      <div id='info'>
+      <div id='about'>
         <div id='photo'>
           <img src={photo} alt='' />
         </div>

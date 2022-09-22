@@ -1,8 +1,8 @@
 div#main {
   position: relative;
   display: block;
-  width: 55vw;
-  margin: 45vh 20vw 45vh 25vw;
+  width: calc(60vw - 5em);
+  margin: 45vh 20vw 45vh calc(20vw + 5em);
 }
 
 div#main > h1,

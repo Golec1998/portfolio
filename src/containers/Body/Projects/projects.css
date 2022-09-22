@@ -1,0 +1,9 @@
+div#projects {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  min-height: 85vh;
+  width: calc(90vw - 5em);
+  margin: 7.5vh 5vw 7.5vh calc(5vw + 5em);
+  z-index: 1000;
+}
