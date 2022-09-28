@@ -6,7 +6,7 @@ import SkillBox from './SkillBox/SkillBox'
 import SkillsJSON from '../../../media/data/skills.json'
 
 import './about.css'
-import photo from '../../../media/images/photo_alpha.png'
+import photo from '../../../media/images/photo_alpha.webp'
 
 class About extends Component {
 
@@ -85,6 +85,8 @@ class About extends Component {
 
     window.addEventListener('scroll', () => this.editPhotoPosition());
   }
+
+  shouldComponentUpdate() { return false; }
 
   render() {
     return (

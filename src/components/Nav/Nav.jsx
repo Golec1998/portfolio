@@ -64,6 +64,8 @@ class Nav extends Component {
     });
   }
 
+  shouldComponentUpdate() { return false; }
+
   render() {
     return (
       <nav>

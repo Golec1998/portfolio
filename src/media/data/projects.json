@@ -3,6 +3,7 @@
     "id": 1,
     "name": "Automobil Events",
     "description": "",
+    "projectLanguages": [ "PL" ],
     "enviorments": [
       {
         "envType": "Android",
@@ -20,6 +21,7 @@
     "id": 2,
     "name": "Pogodynka",
     "description": "",
+    "projectLanguages": [ "PL" ],
     "enviorments": [
       {
         "envType": "Android",
@@ -37,6 +39,7 @@
     "id": 3,
     "name": "PieceHUB",
     "description": "",
+    "projectLanguages": [ "PL" ],
     "enviorments": [
       {
         "envType": "Android",
@@ -49,6 +52,7 @@
     "id": 4,
     "name": "Hydra Shooting Trainer",
     "description": "",
+    "projectLanguages": [ "PL" ],
     "enviorments": [
       {
         "envType": "Arduino",
@@ -61,6 +65,7 @@
     "id": 5,
     "name": "Sleep Tight",
     "description": "",
+    "projectLanguages": [ "PL" ],
     "enviorments": [
       {
         "envType": "PC",
@@ -73,6 +78,7 @@
     "id": 6,
     "name": "Draw Maze",
     "description": "",
+    "projectLanguages": [ "PL" ],
     "enviorments": [
       {
         "envType": "Web",
@@ -85,6 +91,7 @@
     "id": 7,
     "name": "Lightsout",
     "description": "",
+    "projectLanguages": [ "PL" ],
     "enviorments": [
       {
         "envType": "Web",
@@ -97,6 +104,7 @@
     "id": 8,
     "name": "Zapis Fen",
     "description": "",
+    "projectLanguages": [ "PL" ],
     "enviorments": [
       {
         "envType": "PC",
@@ -109,6 +117,7 @@
     "id": 9,
     "name": "Asystent Nauczyciela",
     "description": "",
+    "projectLanguages": [ "PL" ],
     "enviorments": [
       {
         "envType": "Android",

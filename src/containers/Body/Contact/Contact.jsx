@@ -4,6 +4,8 @@ import './contact.css';
 
 class Contact extends Component {
   
+  shouldComponentUpdate() { return false; }
+  
   render() {
     return(
       <div id="contact">

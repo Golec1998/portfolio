@@ -7,6 +7,8 @@ import './projects.css';
 
 class Projects extends Component {
   
+  shouldComponentUpdate() { return false; }
+  
   render() {
     return(
       <div id="projects">
