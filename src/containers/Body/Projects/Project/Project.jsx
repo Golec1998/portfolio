@@ -16,6 +16,14 @@ import unity from '../../../../media/icons/unity.png';
 import web from '../../../../media/icons/web.png';
 
 import automobilevents from '../../../../media/videos/automobilevents.webm';
+import weatherapp from '../../../../media/videos/weatherapp.webm';
+import piecehub from '../../../../media/videos/piecehub.webm';
+import hydrashootingtrainer from '../../../../media/videos/automobilevents.webm';
+import sleeptight from '../../../../media/videos/automobilevents.webm';
+import drawmaze from '../../../../media/videos/automobilevents.webm';
+import lightsout from '../../../../media/videos/automobilevents.webm';
+import fennotation from '../../../../media/videos/automobilevents.webm';
+import teacherassistant from '../../../../media/videos/automobilevents.webm';
 
 class Project extends Component {
 
@@ -55,14 +63,29 @@ class Project extends Component {
       }
     }
 
+    let vid = (projId) => {
+      let vids = [
+        automobilevents,
+        weatherapp,
+        piecehub,
+        hydrashootingtrainer,
+        sleeptight,
+        drawmaze,
+        lightsout,
+        fennotation,
+        teacherassistant
+      ];
+      return vids[projId - 1];
+    }
+
     return(
-      <div className="project">
+      <div className="project" onClick={ () => { alert(`Włączyłeś widok projektu ${this.props.project.name}`); } }>
         <div className="loadingAnim">
           <div><div></div></div>
         </div>
         <div className="projVideo">
           <video className="video" muted loop poster="none" preload="auto" autoPlay>
-            <source src={ automobilevents } type="video/webm" />
+            <source src={ vid(this.props.project.id) } type="video/webm" />
           </video>
         </div>
         <div className="projHeader">

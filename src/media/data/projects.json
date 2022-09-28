@@ -19,7 +19,7 @@
   },
   {
     "id": 2,
-    "name": "Pogodynka",
+    "name": "Weather app",
     "description": "",
     "projectLanguages": [ "PL" ],
     "enviorments": [
@@ -102,7 +102,7 @@
   },
   {
     "id": 8,
-    "name": "Zapis Fen",
+    "name": "Fen notation",
     "description": "",
     "projectLanguages": [ "PL" ],
     "enviorments": [
@@ -115,7 +115,7 @@
   },
   {
     "id": 9,
-    "name": "Asystent Nauczyciela",
+    "name": "Teacher Assistant",
     "description": "",
     "projectLanguages": [ "PL" ],
     "enviorments": [
