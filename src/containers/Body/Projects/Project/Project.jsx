@@ -24,11 +24,13 @@ class Project extends Component {
     let videos = document.getElementsByTagName('video');
     
     for(let i = 0; i < projects.length; i++) {
+      videos[i].playbackRate = 0.75;
+
       projects[i].addEventListener('mouseover', () => {
-        videos[i].play();
+        videos[i].playbackRate = 1.7;
       });
       projects[i].addEventListener('mouseleave', () => {
-        videos[i].pause();
+        videos[i].playbackRate = 0.75;
       });
     }
   }
@@ -55,8 +57,11 @@ class Project extends Component {
 
     return(
       <div className="project">
+        <div className="loadingAnim">
+          <div><div></div></div>
+        </div>
         <div className="projVideo">
-          <video className="video" loop preload="none">
+          <video className="video" muted loop poster="none" preload="auto" autoPlay>
             <source src={ automobilevents } type="video/webm" />
           </video>
         </div>
