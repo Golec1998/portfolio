@@ -18,11 +18,11 @@ import web from '../../../../media/icons/web.png';
 import automobilevents from '../../../../media/videos/automobilevents.webm';
 import weatherapp from '../../../../media/videos/weatherapp.webm';
 import piecehub from '../../../../media/videos/piecehub.webm';
-import hydrashootingtrainer from '../../../../media/videos/automobilevents.webm';
+import hydrashootingtrainer from '../../../../media/videos/hydrashootingtrainer.webm';
 import sleeptight from '../../../../media/videos/automobilevents.webm';
-import drawmaze from '../../../../media/videos/automobilevents.webm';
-import lightsout from '../../../../media/videos/automobilevents.webm';
-import fennotation from '../../../../media/videos/automobilevents.webm';
+import drawmaze from '../../../../media/videos/drawmaze.webm';
+import lightsout from '../../../../media/videos/lightsout.webm';
+import fennotation from '../../../../media/videos/fennotation.webm';
 import teacherassistant from '../../../../media/videos/automobilevents.webm';
 
 class Project extends Component {
@@ -84,7 +84,7 @@ class Project extends Component {
           <div><div></div></div>
         </div>
         <div className="projVideo">
-          <video className="video" muted loop poster="none" preload="auto" autoPlay>
+          <video className="video" muted loop poster="none" preload="none" autoPlay>
             <source src={ vid(this.props.project.id) } type="video/webm" />
           </video>
         </div>
