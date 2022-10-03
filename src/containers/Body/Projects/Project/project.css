@@ -8,6 +8,7 @@ div.project {
   margin: 1.5em;
   border: 5px solid white;
   border-radius: 3em;
+  cursor: pointer;
 }
 
 div.project > div.loadingAnim {

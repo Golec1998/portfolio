@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
+import ProjectView from "./ProjectView/ProjectView";
 
 import './project.css'
 import android from '../../../../media/icons/android.png';
@@ -26,6 +27,8 @@ import fennotation from '../../../../media/videos/fennotation.webm';
 import teacherassistant from '../../../../media/videos/automobilevents.webm';
 
 class Project extends Component {
+
+  shouldComponentUpdate() { return false; }
 
   componentDidMount() {
     let projects = document.getElementsByClassName('project');
@@ -78,37 +81,43 @@ class Project extends Component {
       return vids[projId - 1];
     }
 
+    const showProjectView = (viewId, origin) => {
+      document.getElementById(viewId).classList.add('shown');
+    }
+
     return(
-      <div className="project" onClick={ () => { alert(`Włączyłeś widok projektu ${this.props.project.name}`); } }>
-        <div className="loadingAnim">
-          <div><div></div></div>
-        </div>
-        <div className="projVideo">
-          <video className="video" muted loop poster="none" preload="none" autoPlay>
-            <source src={ vid(this.props.project.id) } type="video/webm" />
-          </video>
-        </div>
-        <div className="projHeader">
-          <div className="projEnvImg">
+      <Fragment>
+        <div className="project" onClick={ () => { showProjectView(`projectView${ this.props.project.id }`, this) } }>
+          <div className="loadingAnim">
+            <div><div></div></div>
+          </div>
+          <div className="projVideo">
+            <video className="video" muted loop poster="none" preload="none" autoPlay>
+              <source src={ vid(this.props.project.id) } type="video/webm" />
+            </video>
+          </div>
+          <div className="projHeader">
+            <div className="projEnvImg">
+              {
+                this.props.project.enviorments.map( env => {
+                  return <img key={ this.props.project.id + env.envType } src={ tech(env.envType) } alt="" />
+                })
+              }
+            </div>
+            <div className="projName">{ this.props.project.name }</div>
+          </div>
+          <div className="projTechStack">
             {
               this.props.project.enviorments.map( env => {
-                return <img key={ this.props.project.id + env.envType } src={ tech(env.envType) } alt="" />
+                return env.technologies.map( tec => {
+                  return <img key={ (this.props.project.id + env.envType + tec) } src={ tech(tec) } alt="" />
+                })
               })
             }
           </div>
-          <div className="projName">{ this.props.project.name }</div>
         </div>
-        <div className="projTechStack">
-          {
-            this.props.project.enviorments.map( env => {
-              //return <img key={(this.props.project.id + env.envType)} src={tech(env.envType)} alt="" />
-              return env.technologies.map( tec => {
-                return <img key={(this.props.project.id + env.envType + tec)} src={tech(tec)} alt="" />
-              })
-            })
-          }
-        </div>
-      </div>
+        <ProjectView viewId={`projectView${ this.props.project.id }`} project={ this.props.project } />
+      </Fragment>
     );
   }
 }

@@ -1,0 +1,52 @@
+div.projectView {
+  position: fixed;
+  display: block;
+  padding: 3vh 5vw;
+  top: 5vh;
+  right: -100vw;
+  width: calc(95vw - 5em);
+  height: 90vh;
+  border: 5px solid white;
+  border-right: none;
+  border-radius: 5em 0 0 5em;
+  background: #000d;
+  z-index: 1000;
+  transition-duration: 0.5s;
+}
+
+div.projectView.shown {
+  right: 0;
+}
+
+div.projectView > div.closeView {
+  position: fixed;
+  height: 4em;
+  width: 4em;
+  left: -100vw;
+  top: calc(50vh - 3em);
+  background: #000;
+  border: 5px solid white;
+  border-radius:2em;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+div.projectView > div.closeView:hover {
+  background: var(--light);
+}
+
+div.projectView > div.closeView:active {
+  background: var(--accent);
+}
+
+div.projectView > div.closeView > p {
+  font-size: 2em;
+}
+
+div.projectView.shown > div.closeView {
+  left: calc(5vw + 2.5em);
+}
