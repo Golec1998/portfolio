@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "name": "Automobil Events",
-    "description": "",
+    "name": "AutomobilEvents",
+    "description": "AutomobilEvents was created in my head as a concept of a medium that would combine information about the most important automotive festivals. This application was initially written in Kotlin as a final project in the subject called Mobile Application Programming during the 5th semester of my studies. I started writing the web version to gain experience in working with React.JS. In the future, I am planing to write the entire application from scratch to adapt its structure according to feedback from events organizers, and give them the ability to add events on their own.",
     "projectLanguages": [ "PL" ],
     "enviorments": [
       {

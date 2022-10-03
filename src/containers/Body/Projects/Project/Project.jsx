@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import ProjectView from "./ProjectView/ProjectView";
 
 import './project.css'
+
 import android from '../../../../media/icons/android.png';
 import arduino from '../../../../media/icons/arduino.png';
 import cpp from '../../../../media/icons/cpp.png';
