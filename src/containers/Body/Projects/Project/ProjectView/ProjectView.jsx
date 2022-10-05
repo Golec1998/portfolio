@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 
 import './projectView.css';
 
@@ -53,7 +53,11 @@ class ProjectView extends Component {
         <p className='projectViewLanguages'>Project languages: { this.props.project.projectLanguages.map( lang => {
           return(lang)
         }) }</p>
-        <p className='projectViewDescription'>{ this.props.project.description }</p>
+        { this.props.project.description.split('|').map( (desc, index) => {
+          return(
+            <p className='projectViewDescription' key={ this.props.project.name + 'desc' + index }>{ desc }</p>
+          )
+        }) }
         <div className='technologies'>
           { this.props.project.enviorments.map( env => {
             return (

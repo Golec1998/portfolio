@@ -11,7 +11,7 @@ div.projectView {
   border: 5px solid white;
   border-right: none;
   border-radius: 5em 0 0 5em;
-  background: #000d;
+  background: #000e;
   z-index: 1000;
   transition-duration: 0.5s;
 }
@@ -61,7 +61,7 @@ div.projectView > p.projectViewLanguages {
 
 div.projectView > p.projectViewDescription {
   width: 80%;
-  margin: 10%;
+  margin: 1% 10%;
 }
 
 div.projectView > div.technologies {
