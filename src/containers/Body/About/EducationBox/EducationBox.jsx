@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 import './educationBox.css'
 
@@ -6,7 +6,7 @@ class EducationBox extends Component {
 
   render() {
     return(
-      <div id="educationBox">
+      <div id='educationBox'>
         
       </div>
     );

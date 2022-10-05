@@ -1,7 +1,64 @@
 div#contact {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10%;
   height: 70vh;
   width: calc(70vw - 5em);
   margin: 15vh 15vw 15vh calc(15vw + 5em);
-  border: 1px solid white;
+  border-radius: 5em;
+  background: #0007;
+  z-index: 5;
+}
+
+div#contact > div#contactInformation {
+  display: flex;
+  flex-direction: column;
+}
+
+div#contact > div#contactForm > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em;
+  /* background: var(--accent); */
+  background: radial-gradient(ellipse at top right, var(--accent-transparent), transparent);
+  border-radius: 2.5em;
+  border: 5px solid white;
+}
+
+div#contact > div#contactForm > form > * {
+  margin: 1em;
+}
+
+div#contact > div#contactForm > form > input,
+div#contact > div#contactForm > form > textarea {
+  background: var(--dark);
+  min-height: 2em;
+  width: 15vw;
+  border-radius: 1em;
+  padding: 0.5em;
+  resize: none;
+  box-shadow: inset 0 0 0.5em var(--darker);
+  border: 0;
+}
+
+div#contact > div#contactForm > form > button {
+  height: 3em;
+  width: 8vw;
+  background: var(--darker);
+  border: 3px solid white;
+  border-radius: 1.5em;
+  transition-duration: 0.5s;
+}
+
+div#contact > div#contactForm > form > button:hover {
+  background: var(--dark);
+}
+
+div#contact > div#contactForm > form > button.clicked {
+  background: #090;
+  width: 3em;
 }

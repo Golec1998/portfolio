@@ -92,7 +92,7 @@ class About extends Component {
     return (
       <div id='about'>
         <div id='photo'>
-          <img src={photo} alt='' loading="lazy" />
+          <img src={photo} alt='' loading='lazy' />
         </div>
         <div id='infoButtons'>
           <button id='selectInfoButton' onClick={this.selectInfo}>Info</button>

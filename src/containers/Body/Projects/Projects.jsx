@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import Project from './Project/Project';
 
 import ProjectsJSON from '../../../media/data/projects.json'
@@ -11,7 +11,7 @@ class Projects extends Component {
   
   render() {
     return(
-      <div id="projects">
+      <div id='projects'>
         {
           ProjectsJSON.map( project => {
             return <Project project={project} key={project.id} />

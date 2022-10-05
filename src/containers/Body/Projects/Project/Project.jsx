@@ -1,5 +1,5 @@
-import React, { Component, Fragment } from "react";
-import ProjectView from "./ProjectView/ProjectView";
+import React, { Component, Fragment } from 'react';
+import ProjectView from './ProjectView/ProjectView';
 
 import './project.css'
 
@@ -88,30 +88,30 @@ class Project extends Component {
 
     return(
       <Fragment>
-        <div className="project" onClick={ () => { showProjectView(`projectView${ this.props.project.id }`, this) } }>
-          <div className="loadingAnim">
+        <div className='project' onClick={ () => { showProjectView(`projectView${ this.props.project.id }`, this) } }>
+          <div className='loadingAnim'>
             <div><div></div></div>
           </div>
-          <div className="projVideo">
-            <video className="video" muted loop poster="none" preload="none" autoPlay>
-              <source src={ vid(this.props.project.id) } type="video/webm" />
+          <div className='projVideo'>
+            <video className='video' muted loop poster='none' preload='none' autoPlay>
+              <source src={ vid(this.props.project.id) } type='video/webm' />
             </video>
           </div>
-          <div className="projHeader">
-            <div className="projEnvImg">
+          <div className='projHeader'>
+            <div className='projEnvImg'>
               {
                 this.props.project.enviorments.map( env => {
-                  return <img key={ this.props.project.id + env.envType } src={ tech(env.envType) } alt="" />
+                  return <img key={ this.props.project.id + env.envType } src={ tech(env.envType) } alt='' />
                 })
               }
             </div>
-            <div className="projName">{ this.props.project.name }</div>
+            <div className='projName'>{ this.props.project.name }</div>
           </div>
-          <div className="projTechStack">
+          <div className='projTechStack'>
             {
               this.props.project.enviorments.map( env => {
                 return env.technologies.map( tec => {
-                  return <img key={ (this.props.project.id + env.envType + tec) } src={ tech(tec) } alt="" />
+                  return <img key={ (this.props.project.id + env.envType + tec) } src={ tech(tec) } alt='' />
                 })
               })
             }
