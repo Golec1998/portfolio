@@ -30,7 +30,7 @@ div#about > div#photo > img {
 div#about > div#infoButtons {
   position: absolute;
   top: 1.5em;
-  right: 5em;
+  right: -100vw;
   transition: all 1s;
 }
 
@@ -48,7 +48,7 @@ div#about > div#infoButtons > button {
 
 div#about > div#personalBox {
   position: absolute;
-  right: 5em;
+  right: -100vw;
   top: 5em;
   bottom: 2em;
   width: 50%;
