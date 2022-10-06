@@ -2,6 +2,25 @@ import React, { Component } from 'react';
 
 import './contact.css';
 
+import email from '../../../media/icons/email.png';
+import linkedin from '../../../media/icons/linkedin.png';
+import discord from '../../../media/icons/discord.png';
+import github from '../../../media/icons/github.png';
+
+const ContactInfoBox = (props) => {
+  return(
+
+    <div id={ props.id } className='contactInfoBox'>
+      <img src={ props.img } alt='' loading='lazy' />
+      <div>
+      <p>{ props.title }:</p>
+      <a href={ props.target } target='_blank' rel='noreferrer'>{ props.targetName }</a>
+      </div>
+    </div>
+
+  )
+}
+
 class Contact extends Component {
   
   shouldComponentUpdate() { return false; }
@@ -10,18 +29,10 @@ class Contact extends Component {
     return(
       <div id='contact'>
         <div id='contactInformation'>
-          <div id='emailAddress'>
-            <p>E-Mail:</p>
-            <a href='mailto:cybertempo3355@gmail.com' target='_blank' rel='noreferrer'>cybertempo3355@gmail.com</a>
-          </div>
-          <div id='linkedIn'>
-            <p>LinkedIn:</p>
-            <a href="https://linkedin.com/in/pawelcebula98" target='_blank' rel='noreferrer'>/pawelcebula98</a>
-          </div>
-          <div id='discord'>
-            <p>Discord:</p>
-            <a href='https://discord.com/users/271214248107966465' target='_blank' rel='noreferrer'>Cebul#4946</a>
-          </div>
+          <ContactInfoBox id='emailAddress' img={ email } title='E-mail' target='mailto:cybertempo3355@gmail.com' targetName='cybertempo3355@gmail.com' />
+          <ContactInfoBox id='linkedIn' img={ linkedin } title='LinkedIn' target='https://linkedin.com/in/pawelcebula98' targetName='pawelcebula98' />
+          <ContactInfoBox id='discord' img={ discord } title='Discord' target='https://discord.com/users/271214248107966465' targetName='Cebul#4946' />
+          <ContactInfoBox id='github' img={ github } title='Github' target='https://github.com/Golec1998' targetName='Golec1998' />
         </div>
         <div id='contactForm'>
           <h2>Contact form<span className='blink'>_</span></h2>
