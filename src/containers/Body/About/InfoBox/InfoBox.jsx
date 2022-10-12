@@ -4,10 +4,10 @@ import './infoBox.css';
 
 const InfoBox = () => (
   <div id='infoBox'>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum nulla et officia? Ad beatae sit excepturi nam, at consectetur atque provident in enim tempore aspernatur nisi delectus veniam neque reiciendis?</p>
-    <p>Quam quos perspiciatis aliquid maiores modi pariatur, enim odio voluptates accusamus commodi optio ut consectetur in asperiores ratione rerum quae, mollitia ea obcaecati. Autem deserunt sit esse reprehenderit molestiae veritatis?</p>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, id quos velit neque perferendis ipsum ab enim, veritatis voluptatum tempora quod. Nobis odio quos porro quam ad, distinctio, rem quisquam alias, magni nam vel similique beatae voluptatum qui tempore consectetur perferendis voluptas laboriosam ab ipsum iure illum. Tenetur reiciendis quod quisquam, dolore, provident sint alias molestiae, quia labore cupiditate aspernatur.</p>
-    <p>Tempore animi beatae reprehenderit facilis! Veritatis ab iure fuga corporis voluptate consequuntur laudantium, assumenda facere deserunt, cumque deleniti omnis id laborum optio eos, explicabo itaque sunt maiores consequatur et culpa?</p>
+    <h2>Hi 🖐</h2>
+    <p>I am Paweł and I am currently studying at the Silesian University of Technology. I have been creating websites and working as a freelancer since I graduated from a technical college.</p>
+    <p>Recently I have decided that it is the right time to start my first decent job in the IT industry, preferably as a junior front-end developer. As a result I motivated myself to learn React.JS as an extension of my current knowledge of HTML, CSS and JS.</p>
+    <p>On a daily basis I am interested in motorization and volleyball. I am a communicative person, with high interpersonal skills and problem solving mindset. I would consider myself a strong team player, focused on constant development.</p>
   </div>
 )
 
