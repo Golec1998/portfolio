@@ -1,0 +1,12 @@
+div.school {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-top: dashed 1px white;
+  margin: 1em 0;
+}
+
+div.school > img {
+  width: 15%;
+  margin-right: 1em;
+}

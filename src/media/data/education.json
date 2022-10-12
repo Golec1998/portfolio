@@ -1,14 +1,59 @@
-[
-  {
-    "id": 1,
-    "start-year": 2019,
-    "end-year": 2023,
-    "school-name": "Silesian University of Technology"
-  },
-  {
-    "id": 2,
-    "start-year": 2014,
-    "end-year": 2018,
-    "school-name": "Silesian University of Technology"
-  }
-]
+{
+  "schools": [
+    {
+      "id": 1,
+      "startYear": 2019,
+      "endYear": 2023,
+      "schoolName": "Silesian University of Technology",
+      "faculty": "Faculty of Applied Mathematics",
+      "field": "Informatics",
+      "specialization": "Mobile Applications Programming"
+    },
+    {
+      "id": 2,
+      "startYear": 2014,
+      "endYear": 2018,
+      "schoolName": "ZSTI Gliwice",
+      "faculty": "",
+      "field": "Informatics",
+      "specialization": "IT technician"
+    }
+  ],
+  "certificates": [
+    {
+      "id": 1,
+      "name": "React from scratch",
+      "description": "",
+      "date": "September 20th, 2022",
+      "link": "https://platforma.strefakursow.pl/p/certificate/hash/j57p8gzw6vc40gs4088wg00kww4wo4g"
+    },
+    {
+      "id": 2,
+      "name": "TypeScript course",
+      "description": "",
+      "date": "September 16th, 2022",
+      "link": "https://platforma.strefakursow.pl/p/certificate/hash/nv4c88g44hwg40w0kkkg08kssg8s0ws"
+    },
+    {
+      "id": 3,
+      "name": "E.14 professional qualification exam",
+      "description": "Creating Web based applications, and databases. Administration of databases.",
+      "date": "March 23rd, 2018",
+      "link": ""
+    },
+    {
+      "id": 4,
+      "name": "E.13 professional qualification exam",
+      "description": "Designing local computer networks and network administration",
+      "date": "August 25th, 2017",
+      "link": ""
+    },
+    {
+      "id": 5,
+      "name": "E.12 professional qualification exam",
+      "description": "Assembly and operation of personal computers and peripheral devices",
+      "date": "August 26th, 2016",
+      "link": ""
+    }
+  ]
+}

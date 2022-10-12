@@ -21,10 +21,10 @@ class Main extends Component {
     }
 
     setTimeout(() => {
-      setInterval(() => {
+      let interval = setInterval(() => {
         if(this.state.headerLength >= this.headerText.length)
         {
-          clearInterval(this);
+          clearInterval(interval);
           this.setState({ h3style: { opacity: 1, transition: 'all 2s' } });
           document.getElementById('menu').classList.add('menuShown');
           document.getElementsByTagName('html')[0].style.overflowY = 'scroll';

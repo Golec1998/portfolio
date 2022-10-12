@@ -1,0 +1,23 @@
+div.certificate {
+  display: flex;
+  flex-direction: column;
+  border-top: dashed 1px white;
+  margin: 1em 0;
+}
+
+div.certificate > a > button {
+  padding: 0.3em 0.8em;
+  margin-top: 0.3em;
+  background: var(--darker);
+  border: 2px solid white;
+  border-radius: 3em;
+  transition-duration: 0.5s;
+}
+
+div.certificate > a > button:hover {
+  background: var(--dark);
+}
+
+div.certificate > a > button:active {
+  background: var(--accent);
+}
