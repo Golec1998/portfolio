@@ -14,7 +14,7 @@ const ContactInfoBox = (props) => {
       <img src={ props.img } alt='' loading='lazy' />
       <div>
       <p>{ props.title }:</p>
-      <a href={ props.target } target='_blank' rel='noreferrer'>{ props.targetName }</a>
+      <a href={ props.target } aria-label={ props.aria } target='_blank' rel='noreferrer'>{ props.targetName }</a>
       </div>
     </div>
 
@@ -29,10 +29,10 @@ class Contact extends Component {
     return(
       <div id='contact'>
         <div id='contactInformation'>
-          <ContactInfoBox id='emailAddress' img={ email } title='E-mail' target='mailto:pawelcebula@paceb.dev' targetName='pawelcebula@paceb.dev' />
-          <ContactInfoBox id='linkedIn' img={ linkedin } title='LinkedIn' target='https://linkedin.com/in/pawelcebula98' targetName='pawelcebula98' />
-          <ContactInfoBox id='discord' img={ discord } title='Discord' target='https://discord.com/users/271214248107966465' targetName='Cebul#4946' />
-          <ContactInfoBox id='github' img={ github } title='Github' target='https://github.com/Golec1998' targetName='Golec1998' />
+          <ContactInfoBox id='emailAddress' img={ email } title='E-mail' aria='E-mail me' target='mailto:pawelcebula@paceb.dev' targetName='pawelcebula@paceb.dev' />
+          <ContactInfoBox id='linkedIn' img={ linkedin } title='LinkedIn' aria='Contact me on LinkedIn' target='https://linkedin.com/in/pawelcebula98' targetName='pawelcebula98' />
+          <ContactInfoBox id='discord' img={ discord } title='Discord' aria='Contact me on Discord' target='https://discord.com/users/271214248107966465' targetName='Cebul#4946' />
+          <ContactInfoBox id='github' img={ github } title='Github' aria='Check out my projects on Github' target='https://github.com/Golec1998' targetName='Golec1998' />
         </div>
         <div id='contactForm'>
           <h2>Contact form<span className='blink'>_</span></h2>
