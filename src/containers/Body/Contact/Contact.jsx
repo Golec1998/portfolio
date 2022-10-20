@@ -29,7 +29,7 @@ class Contact extends Component {
     return(
       <div id='contact'>
         <div id='contactInformation'>
-          <ContactInfoBox id='emailAddress' img={ email } title='E-mail' target='mailto:cybertempo3355@gmail.com' targetName='cybertempo3355@gmail.com' />
+          <ContactInfoBox id='emailAddress' img={ email } title='E-mail' target='mailto:pawelcebula@paceb.dev' targetName='pawelcebula@paceb.dev' />
           <ContactInfoBox id='linkedIn' img={ linkedin } title='LinkedIn' target='https://linkedin.com/in/pawelcebula98' targetName='pawelcebula98' />
           <ContactInfoBox id='discord' img={ discord } title='Discord' target='https://discord.com/users/271214248107966465' targetName='Cebul#4946' />
           <ContactInfoBox id='github' img={ github } title='Github' target='https://github.com/Golec1998' targetName='Golec1998' />

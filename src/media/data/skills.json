@@ -1,41 +1,46 @@
 [
   {
-    "id": 0,
-    "name": "HTML",
-    "lvl": 3
-  },
-  {
     "id": 1,
-    "name": "CSS",
-    "lvl": 3
+    "name": "HTML",
+    "lvl": 4
   },
   {
     "id": 2,
-    "name": "React.JS",
-    "lvl": 2
+    "name": "CSS",
+    "lvl": 4
   },
   {
     "id": 3,
+    "name": "JavaScript",
+    "lvl": 3
+  },
+  {
+    "id": 4,
+    "name": "React.JS",
+    "lvl": 3
+  },
+  {
+    "id": 5,
     "name": "TypeScript",
     "lvl": 2
   },
   {
-    "id": 4,
+    "id": 6,
     "name": "Node.JS",
     "lvl": 1
   },
   {
-    "id": 5,
+    "id": 7,
     "name": "MySQL",
     "lvl": 3
   },
   {
-    "id": 6,
+    "id": 8,
     "name": "Unity3D",
     "lvl": 2
   },
   {
-    "id": 7,
+    "id": 9,
     "name": "C#",
     "lvl": 2
   }
