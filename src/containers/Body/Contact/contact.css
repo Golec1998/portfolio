@@ -17,6 +17,7 @@ div#contact {
 
 div#contact > div {
   margin: 2.5em;
+  overflow: visible;
 }
 
 div#contact > div#contactInformation {
@@ -72,6 +73,8 @@ div#contact > div#contactForm > form {
 
 div#contact > div#contactForm > form > * {
   margin: 1em;
+  border: 2px solid #0001;
+  transition-duration: 0.5s;
 }
 
 div#contact > div#contactForm > form:focus-within > *:required:invalid {
@@ -87,7 +90,6 @@ div#contact > div#contactForm > form > textarea {
   padding: 0.5em;
   resize: none;
   box-shadow: inset 0 0 0.5em #0009;
-  border: 0;
 }
 
 div#contact > div#contactForm > form > textarea {

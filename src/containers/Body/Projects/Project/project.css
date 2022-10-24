@@ -83,13 +83,15 @@ div.project > div.projVideo > video {
 
 div.project > div.projHeader {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   padding: 1em;
   background: #000c;
   z-index: 30;
 }
 
 div.project > div.projHeader > div.projName {
+  text-align: center;
   font-size: 1.5em;
   margin: 0 0.2em;
   width: 8em;

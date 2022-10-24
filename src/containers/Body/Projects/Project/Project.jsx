@@ -4,6 +4,7 @@ import ProjectView from './ProjectView/ProjectView';
 import './project.css'
 
 import android from '../../../../media/icons/android.png';
+import api from '../../../../media/icons/api.png';
 import arduino from '../../../../media/icons/arduino.png';
 import cpp from '../../../../media/icons/cpp.png';
 import cs from '../../../../media/icons/cs.png';
@@ -11,6 +12,7 @@ import firebase from '../../../../media/icons/firebase.png';
 import js from '../../../../media/icons/js.png';
 import kotlin from '../../../../media/icons/kotlin.png';
 import pc from '../../../../media/icons/pc.png';
+import php from '../../../../media/icons/php.png';
 import python from '../../../../media/icons/python.png';
 import react from '../../../../media/icons/react.png';
 import room from '../../../../media/icons/room.png';
@@ -51,6 +53,7 @@ class Project extends Component {
     let tech = (icon) => {
       switch(icon) {
         case 'Android': return android;
+        case 'API': return api;
         case 'Arduino': return arduino;
         case 'C++': return cpp;
         case 'C#': return cs;
@@ -58,6 +61,7 @@ class Project extends Component {
         case 'JavaScript': return js;
         case 'Kotlin': return kotlin;
         case 'PC': return pc;
+        case 'PHP': return php;
         case 'Python': return python;
         case 'React.JS': return react;
         case 'Room': return room;
