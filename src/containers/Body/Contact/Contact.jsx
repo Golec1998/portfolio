@@ -37,10 +37,11 @@ class Contact extends Component {
         <div id='contactForm'>
           <h2>Contact form<span className='blink'>_</span></h2>
           <form action=''>
-            <input type='text' placeholder='Name'/>
-            <input type='e-mail' placeholder='E-mail'/>
-            <textarea name='' id='' rows='7' placeholder='Message'/>
-            <button type='button'>Send</button>
+            <input type='text' placeholder='Name' required/>
+            <input type='e-mail' placeholder='E-mail' required/>
+            <textarea name='' id='' rows='7' placeholder='Message' required/>
+            <label>All fields are required</label>
+            <button>Send</button>
           </form>
         </div>
       </div>

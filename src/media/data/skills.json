@@ -26,21 +26,26 @@
   },
   {
     "id": 6,
+    "name": "Python",
+    "lvl": 3
+  },
+  {
+    "id": 7,
     "name": "Node.JS",
     "lvl": 1
   },
   {
-    "id": 7,
+    "id": 8,
     "name": "MySQL",
     "lvl": 3
   },
   {
-    "id": 8,
+    "id": 9,
     "name": "Unity3D",
     "lvl": 2
   },
   {
-    "id": 9,
+    "id": 10,
     "name": "C#",
     "lvl": 2
   }
