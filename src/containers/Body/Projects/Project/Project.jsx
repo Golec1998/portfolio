@@ -102,6 +102,7 @@ class Project extends Component {
             </video>
           </div>
           <div className='projHeader'>
+            <div className='projName'>{ this.props.project.name }</div>
             <div className='projEnvImg'>
               {
                 this.props.project.enviorments.map( env => {
@@ -109,7 +110,6 @@ class Project extends Component {
                 })
               }
             </div>
-            <div className='projName'>{ this.props.project.name }</div>
           </div>
           <div className='projTechStack'>
             {
