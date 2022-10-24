@@ -51,6 +51,12 @@ div#about > div#infoButtons > button {
   font-size: 1.2em;
   font-weight: 700;
   cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+div#about > div#infoButtons > button:hover {
+  border-top: 3px solid var(--accent) !important;
+  border-bottom: 3px solid var(--accent) !important;
 }
 
 div#about > div#personalBox {

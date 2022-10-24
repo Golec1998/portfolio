@@ -74,6 +74,10 @@ div#contact > div#contactForm > form > * {
   margin: 1em;
 }
 
+div#contact > div#contactForm > form:focus-within > *:required:invalid {
+  border: 2px solid red;
+}
+
 div#contact > div#contactForm > form > input,
 div#contact > div#contactForm > form > textarea {
   background: var(--darker);
