@@ -119,6 +119,7 @@ div#contact > div#contactForm > form > textarea::-webkit-scrollbar-thumb:hover {
 div#contact > div#contactForm > form > label {
   font-size: smaller;
   color: #fff5;
+  border: none;
 }
 
 div#contact > div#contactForm > form > button {
