@@ -8,14 +8,18 @@ ul {
   top: 0;
   bottom: 0;
   width: 20em;
-  background: var(--accent);
+  /* background: var(--accent); */
+  background: radial-gradient(ellipse at right, var(--accent), var(--accent-transparent));
   transition-duration: 0.5s;
-  border-right: 5px solid white;
+  /* border-right: 5px solid white; */
   z-index: 1000;
+  backdrop-filter: blur(0.25em);
+  -webkit-backdrop-filter: blur(0.25em);
+  box-shadow: 0 0 2em -0.25em #000c, 0 0 0.3em #fff2 inset;
 }
 
 ul.menuShown {
-  left: -15em;
+  left: calc(-15em - 5px);
 }
 
 ul:hover {
@@ -42,6 +46,7 @@ ul > li > div {
 
 ul > li > div:hover {
   left: 1em;
+  background-color: var(--accent);
 }
 
 ul > li > div > div {

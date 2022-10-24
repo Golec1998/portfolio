@@ -10,13 +10,13 @@ import github from '../../../media/icons/github.png';
 const ContactInfoBox = (props) => {
   return(
 
-    <div id={ props.id } className='contactInfoBox'>
+    <a id={ props.id }  className='contactInfoBox' href={ props.target } aria-label={ props.aria } target='_blank' rel='noreferrer'>
       <img src={ props.img } alt='' loading='lazy' />
       <div>
-      <p>{ props.title }:</p>
-      <a href={ props.target } aria-label={ props.aria } target='_blank' rel='noreferrer'>{ props.targetName }</a>
+        <p>{ props.title }:</p>
+        <p>{ props.targetName }</p>
       </div>
-    </div>
+    </a>
 
   )
 }

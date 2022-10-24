@@ -6,9 +6,10 @@ div.project {
   width: 20em;
   height: 20em;
   margin: 1.5em;
-  border: 5px solid white;
+  /* border: 5px solid white; */
   border-radius: 3em;
   cursor: pointer;
+  box-shadow: 0 0 2em -0.25em #000c, 0 0 0.3em #fff2 inset;
 }
 
 div.project > div.loadingAnim {

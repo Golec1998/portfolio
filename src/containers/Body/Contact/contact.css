@@ -10,6 +10,9 @@ div#contact {
   border-radius: 5em;
   background: #0007;
   z-index: 5;
+  backdrop-filter: blur(0.25em);
+  -webkit-backdrop-filter: blur(0.25em);
+  box-shadow: 0 0 2em -0.25em #000c, 0 0 0.3em #fff2 inset;
 }
 
 div#contact > div {
@@ -23,16 +26,22 @@ div#contact > div#contactInformation {
   justify-content: space-between;
 }
 
-div#contact > div#contactInformation > div.contactInfoBox {
+div#contact > div#contactInformation > a.contactInfoBox {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 1em 2em;
   background: var(--dark);
   border-radius: 2.5em;
+  text-decoration: none;
+  transition-duration: 0.5s;
 }
 
-div#contact > div#contactInformation > div.contactInfoBox > img {
+div#contact > div#contactInformation > a.contactInfoBox:hover {
+  background: var(--accent);
+}
+
+div#contact > div#contactInformation > a.contactInfoBox > img {
   width: 3em;
   margin-right: 1em;
   filter: invert(100%);
@@ -54,11 +63,9 @@ div#contact > div#contactForm > form {
   padding: 1em;
   height: 80%;
   min-width: 25em;
-  width: 30vw;
-  /* background: var(--accent); */
-  background: radial-gradient(ellipse at top right, var(--accent-transparent), transparent);
+  background: radial-gradient(ellipse at top right, var(--accent), var(--accent-transparent));
   border-radius: 2.5em;
-  border: 5px solid white;
+  /* border: 5px solid white; */
 }
 
 div#contact > div#contactForm > form > * {

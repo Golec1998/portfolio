@@ -4,9 +4,12 @@ div#about {
   width: calc(70vw - 5em);
   height: 50vh;
   margin: 25vh 15vw 25vh calc(15vw + 5em);
-  border: solid white 5px;
+  /* border: solid white 5px; */
+  backdrop-filter: blur(0.25em);
+  -webkit-backdrop-filter: blur(0.25em);
+  box-shadow: 0 0 2em -0.25em #000c, 0 0 0.3em #fff2 inset;
   border-radius: 3em;
-  background: radial-gradient(ellipse at bottom left, var(--accent-transparent), transparent);
+  background: radial-gradient(ellipse at bottom left, var(--accent), var(--accent-transparent));
 }
 
 div#about > div#photo {
@@ -39,7 +42,11 @@ div#about > div#infoButtons > button {
   display: inline-block;
   border: 0;
   background: none;
-  padding: 5px;
+  padding: 5px 1em;
+  height: 2.2em;
+  border-radius: 1.1em;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
   margin-left: 3px;
   font-size: 1.2em;
   font-weight: 700;

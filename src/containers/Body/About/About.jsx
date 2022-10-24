@@ -15,22 +15,34 @@ class About extends Component {
   selectInfo = () => {
     document.getElementById('infoContainer').style.left = '0';
     for(let i = 0; i < 3; i++)
-      document.getElementById('infoButtons').getElementsByTagName('button')[i].style.border = '3px solid transparent';
-    document.getElementById('selectInfoButton').style.border = '3px solid white';
+    {
+      document.getElementById('infoButtons').getElementsByTagName('button')[i].style.borderTop = '3px solid transparent';
+      document.getElementById('infoButtons').getElementsByTagName('button')[i].style.borderBottom = '3px solid transparent';
+    }
+    document.getElementById('selectInfoButton').style.borderTop = '3px solid white';
+    document.getElementById('selectInfoButton').style.borderBottom = '3px solid white';
   }
 
   selectEducation = () => {
     document.getElementById('infoContainer').style.left = '-100%';
     for(let i = 0; i < 3; i++)
-      document.getElementById('infoButtons').getElementsByTagName('button')[i].style.border = '3px solid transparent';
-    document.getElementById('selectEducationButton').style.border = '3px solid white';
+    {
+      document.getElementById('infoButtons').getElementsByTagName('button')[i].style.borderTop = '3px solid transparent';
+      document.getElementById('infoButtons').getElementsByTagName('button')[i].style.borderBottom = '3px solid transparent';
+    }
+    document.getElementById('selectEducationButton').style.borderTop = '3px solid white';
+    document.getElementById('selectEducationButton').style.borderBottom = '3px solid white';
   }
 
   selectSkills = () => {
     document.getElementById('infoContainer').style.left = '-200%';
     for(let i = 0; i < 3; i++)
-      document.getElementById('infoButtons').getElementsByTagName('button')[i].style.border = '3px solid transparent';
-    document.getElementById('selectSkillsButton').style.border = '3px solid white';
+    {
+      document.getElementById('infoButtons').getElementsByTagName('button')[i].style.borderTop = '3px solid transparent';
+      document.getElementById('infoButtons').getElementsByTagName('button')[i].style.borderBottom = '3px solid transparent';
+    }
+    document.getElementById('selectSkillsButton').style.borderTop = '3px solid white';
+    document.getElementById('selectSkillsButton').style.borderBottom = '3px solid white';
     if(!this.skillsShown) this.appearSkills();
   }
 

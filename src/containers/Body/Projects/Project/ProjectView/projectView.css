@@ -14,6 +14,9 @@ div.projectView {
   background: #000e;
   z-index: 1000;
   transition-duration: 0.5s;
+  /* backdrop-filter: blur(0.25em); */
+  -webkit-backdrop-filter: blur(0.25em);
+  box-shadow: 0 0 2em -0.25em #000c, 0 0 0.3em #fff2 inset;
 }
 
 div.projectView.shown {
