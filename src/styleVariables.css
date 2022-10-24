@@ -5,15 +5,8 @@
     --dark: #333333;
     --light: #878787;
     --accent: #720000;
+    --darker-transparent: #21212144;
+    --dark-transparent: #33333344;
+    --light-transparent: #87878744;
     --accent-transparent: #72000044;
 }
-
-.darkerBg { background: var(--darker); }
-.darkBg { background: var(--dark); }
-.lightBg { background: var(--light); }
-.accentBg { background: var(--accent); }
-
-.darkerTxt { color: var(--darker); }
-.darkTxt { color: var(--dark); }
-.lightTxt { color: var(--light); }
-.accentTxt { color: var(--accent); }
