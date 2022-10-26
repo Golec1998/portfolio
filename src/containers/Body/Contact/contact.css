@@ -138,7 +138,7 @@ div#contact > div#contactForm > form > button:hover {
 
 div#contact > div#contactForm > form > button.clicked {
   background: var(--accent);
-  width: 3em;
+  width: 75%;
 }
 
 @keyframes formFeedbackJump {
