@@ -163,7 +163,7 @@ class Contact extends Component {
               <button disabled>Sending...</button> :
               this.state.feedback === '' ?
                 <button>Send</button> :
-                <p>{ this.state.feedback }</p>}
+                <p className='formFeedback'>{ this.state.feedback }</p>}
           </form>
 
         </div>

@@ -17,11 +17,3 @@ div#main > h1 {
 div#main > h3 {
   font-size: 1.5em;
 }
-
-@keyframes underscoreBlink {
-  0% { opacity: 0; }
-  10% { opacity: 1; }
-  50% { opacity: 1; }
-  60% { opacity: 0; }
-  100% { opacity: 0; }
-}
