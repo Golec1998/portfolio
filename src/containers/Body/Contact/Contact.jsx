@@ -160,7 +160,7 @@ class Contact extends Component {
             />
             <label>All fields are required</label>
             { this.state.submitting ?
-              <button disabled>Sending...</button> :
+              <button className='clicked' disabled>Sending...</button> :
               this.state.feedback === '' ?
                 <button>Send</button> :
                 <p className='formFeedback'>{ this.state.feedback }</p>}
