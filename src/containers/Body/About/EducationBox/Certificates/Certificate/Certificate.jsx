@@ -14,7 +14,7 @@ class Certificate extends Component {
         <h3>{ certificate.name }</h3>
         { certificate.description !== '' ? <p>{ certificate.description }</p> : null }
         <p>Received on { certificate.date }</p>
-        { certificate.link !== '' ? <a href={ certificate.link } target='_blank' rel='noreferrer'><button>Check the certification <i className="fa fa-link"></i></button></a> : null }
+        { certificate.link !== '' ? <a href={ certificate.link } target='_blank' rel='noopener noreferrer'><button>Check the certification <i className="fa fa-link"></i></button></a> : null }
       </div>
     )
   }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 import './contact.css';
 
@@ -10,7 +11,14 @@ import github from '../../../media/icons/github.png';
 const ContactInfoBox = (props) => {
   return(
 
-    <a id={ props.id }  className='contactInfoBox' href={ props.target } aria-label={ props.aria } target='_blank' rel='noreferrer'>
+    <a
+      id={ props.id }
+      className='contactInfoBox'
+      href={ props.target }
+      aria-label={ props.aria }
+      target='_blank'
+      rel='noopener noreferrer'
+    >
       <img src={ props.img } alt='' loading='lazy' />
       <div>
         <p>{ props.title }:</p>
@@ -22,27 +30,142 @@ const ContactInfoBox = (props) => {
 }
 
 class Contact extends Component {
-  
-  shouldComponentUpdate() { return false; }
+
+  state = {
+    formName: '',
+    formEmail: '',
+    formMessage: '',
+    submitting: false,
+    feedback: ''
+  }
+
+  contactFormId = 'SQpIAnaj';
+  formSparkURL = `https://submit-form.com/${ this.contactFormId }`;
   
   render() {
+
+    const submitForm = async (event) => {
+      event.preventDefault();
+      let tempState = { ...this.state };
+      tempState['submitting'] = true;
+      this.setState(tempState);
+      await postSubmission();
+    }
+  
+    const postSubmission = async() => {
+      const payload = {
+        name: this.state.formName,
+        email: this.state.formEmail,
+        message: this.state.formMessage
+      };
+  
+      try {
+        const result = await axios.post(this.formSparkURL, payload);
+        console.log(result);
+        this.setState({
+          formName: '',
+          formEmail: '',
+          formMessage: '',
+          submitting: false,
+          feedback: 'Message sent, thank you 😊'
+        });
+      }
+      catch(error) {
+        console.log(error);
+        this.setState({
+          formName: '',
+          formEmail: '',
+          formMessage: '',
+          submitting: false,
+          feedback: 'An error occurred, sorry for the inconvenience 😥'
+        });
+      }
+    }
+
+    const updateFormHandler = (event) => {
+      const { id, value } = event.target;
+      const formKey = id;
+      const updatedFormState = { ...this.state }
+      updatedFormState[formKey] = value;
+      this.setState(updatedFormState);
+    }
+
     return(
       <div id='contact'>
         <div id='contactInformation'>
-          <ContactInfoBox id='emailAddress' img={ email } title='E-mail' aria='E-mail me' target='mailto:pawelcebula@paceb.dev' targetName='pawelcebula@paceb.dev' />
-          <ContactInfoBox id='linkedIn' img={ linkedin } title='LinkedIn' aria='Contact me on LinkedIn' target='https://linkedin.com/in/pawelcebula98' targetName='pawelcebula98' />
-          <ContactInfoBox id='discord' img={ discord } title='Discord' aria='Contact me on Discord' target='https://discord.com/users/271214248107966465' targetName='Cebul#4946' />
-          <ContactInfoBox id='github' img={ github } title='Github' aria='Check out my projects on Github' target='https://github.com/Golec1998' targetName='Golec1998' />
+
+          <ContactInfoBox
+            id='emailAddress'
+            img={ email }
+            title='E-mail'
+            aria='E-mail me'
+            target='mailto:pawelcebula@paceb.dev'
+            targetName='pawelcebula@paceb.dev'
+          />
+          <ContactInfoBox
+            id='linkedIn'
+            img={ linkedin }
+            title='LinkedIn'
+            aria='Contact me on LinkedIn'
+            target='https://linkedin.com/in/pawelcebula98'
+            targetName='pawelcebula98'
+          />
+          <ContactInfoBox
+            id='discord'
+            img={ discord }
+            title='Discord'
+            aria='Contact me on Discord'
+            target='https://discord.com/users/271214248107966465'
+            targetName='Cebul#4946'
+          />
+          <ContactInfoBox
+            id='github'
+            img={ github }
+            title='Github'
+            aria='Check out my projects on Github'
+            target='https://github.com/Golec1998'
+            targetName='Golec1998'
+          />
+
         </div>
+
         <div id='contactForm'>
+
           <h2>Contact form<span className='blink'>_</span></h2>
-          <form action=''>
-            <input type='text' placeholder='Name' required/>
-            <input type='email' placeholder='E-mail' required/>
-            <textarea name='' id='' rows='7' placeholder='Message' required/>
+          
+          <form onSubmit={ submitForm }>
+            <input
+              id='formName'
+              onChange={ updateFormHandler }
+              type='text'
+              placeholder='Name'
+              value={ this.state.formName }
+              required
+            />
+            <input
+              id='formEmail'
+              onChange={ updateFormHandler }
+              type='email'
+              placeholder='E-mail'
+              value={ this.state.formEmail }
+              required
+            />
+            <textarea
+              id='formMessage'
+              onChange={ updateFormHandler }
+              rows='7'
+              placeholder='Message'
+              value={ this.state.formMessage }
+              required
+            />
             <label>All fields are required</label>
-            <button>Send</button>
+            { this.state.submitting ?
+              <button disabled>Sending...</button> :
+              this.state.feedback === '' ?
+                <button>Send</button> :
+                <p>{ this.state.feedback }</p>}
           </form>
+
         </div>
       </div>
     );

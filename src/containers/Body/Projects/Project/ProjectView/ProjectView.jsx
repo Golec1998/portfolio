@@ -69,7 +69,7 @@ class ProjectView extends Component {
                 <img loading='lazy' src={ tech(env.envType) } alt='' />
                 <div className='techInfo'>
                   <h3>{ env.envType }:</h3>
-                  <a href={ env.github } target='_blank' rel='noreferrer'>{ env.github }</a>
+                  <a href={ env.github } target='_blank' rel='noopener noreferrer'>{ env.github }</a>
                   <div className='techImages'>
                     { env.technologies.map( technology => {
                       return (
