@@ -66,14 +66,14 @@ class ProjectView extends Component {
           { this.props.project.enviorments.map( env => {
             return (
               <div className='technology' key={ `tech${ this.props.id + env.envType }` }>
-                <img loading='lazy' src={ tech(env.envType) } alt='' />
+                <img loading='lazy' src={ tech(env.envType) } alt='' width='auto' height='auto' />
                 <div className='techInfo'>
                   <h3>{ env.envType }:</h3>
-                  <a href={ env.github } target='_blank' rel='noopener noreferrer' aria-label={ `Repository link for ${ env.envType } version` }>{ env.github }</a>
+                  <a href={ env.github } target='_blank' rel='noopener noreferrer' aria-label={ `Repository link for ${ env.envType } version of ${ this.props.project.name }` }>{ env.github }</a>
                   <div className='techImages'>
                     { env.technologies.map( technology => {
                       return (
-                        <img loading='lazy' src={ tech(technology) } alt='' key={ `tech${ this.props.id + env.envType + technology }` } />
+                        <img loading='lazy' src={ tech(technology) } alt='' key={ `tech${ this.props.id + env.envType + technology }` } width='auto' height='auto' />
                       )
                     }) }
                   </div>

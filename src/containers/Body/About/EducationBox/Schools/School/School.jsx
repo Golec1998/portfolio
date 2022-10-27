@@ -19,7 +19,7 @@ class School extends Component {
 
     return(
       <div className='school'>
-        <img src={ this.logo(school.id) } alt='' loading='lazy' />
+        <img src={ this.logo(school.id) } alt='' loading='lazy' width='auto' height='auto' />
         <div className='schoolInfo'>
           <h3>{ school.schoolName }</h3>
           { school.faculty !== '' ? <h4>{ school.faculty }</h4> : null }

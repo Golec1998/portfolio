@@ -4,7 +4,7 @@ import Body from '../Body/Body';
 import Nav from '../../components/Nav/Nav';
 
 import '../../index.css';
-import '../../fa/css/all.min.css';
+import '../../fa/css/all.css';
 
 import ParticlesBG from '../../components/ParticlesBG/ParticlesBG';
 

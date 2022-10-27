@@ -19,7 +19,7 @@ const ContactInfoBox = (props) => {
       target='_blank'
       rel='noopener noreferrer'
     >
-      <img src={ props.img } alt='' loading='lazy' />
+      <img src={ props.img } alt='' loading='lazy' width='auto' height='auto' />
       <div>
         <p>{ props.title }:</p>
         <p>{ props.targetName }</p>

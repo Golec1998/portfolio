@@ -70,9 +70,39 @@ class Nav extends Component {
     return (
       <nav>
         <ul id='menu'>
-          <li><div className='menuButton' id='aboutButton' onClick={ () => { this.scrollTo(1) } }><div>About</div><div><img src={aboutIcon} alt='' /></div></div></li>
-          <li><div className='menuButton' id='projectsButton' onClick={ () => { this.scrollTo(2) } }><div>Projects</div><div><img src={projectsIcon} alt='' /></div></div></li>
-          <li><div className='menuButton' id='contactButton' onClick={ () => { this.scrollTo(3) } }><div>Contact</div><div><img src={contactIcon} alt='' /></div></div></li>
+          <li>
+            <div 
+            className='menuButton'
+            id='aboutButton'
+            onClick={ () => { this.scrollTo(1) } }>
+              <div>About</div>
+              <div>
+                <img src={ aboutIcon } alt='' width='auto' height='auto' />
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+            className='menuButton'
+            id='projectsButton'
+            onClick={ () => { this.scrollTo(2) } }>
+              <div>Projects</div>
+              <div>
+                <img src={ projectsIcon } alt='' width='auto' height='auto' />
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+            className='menuButton'
+            id='contactButton'
+            onClick={ () => { this.scrollTo(3) } }>
+              <div>Contact</div>
+              <div>
+                <img src={ contactIcon } alt='' width='auto' height='auto' />
+              </div>
+            </div>
+          </li>
         </ul>
       </nav>
     );

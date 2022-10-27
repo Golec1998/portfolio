@@ -1,20 +1,48 @@
-header#header {
+header {
   position: relative;
   display: block;
   width: calc(60vw - 5em);
   margin: 45vh 20vw 45vh calc(20vw + 5em);
 }
 
-header#header > h1,
-header#header > p.subHeader {
+header > h1,
+header > p.subHeader {
   margin: 0;
   font-weight: 700;
 }
 
-header#header > h1 {
+header > h1 {
   font-size: 4em;
 }
 
-header#header > p.subHeader {
+header > p.subHeader {
   font-size: 1.5em;
+}
+
+header > i {
+  position: fixed;
+  padding: 1em;
+  text-align: center;
+  font-size: 3em;
+  bottom: -5em;
+  width: 3em;
+  left: calc(50vw - 1.5em);
+  transition-duration: 0.5s;
+  animation: arrowJump 1s infinite;
+  animation-iteration-count: infinite;
+}
+
+header > i:hover {
+  scale: 1.2;
+  text-shadow: 0 0 0.5em var(--accent);
+}
+
+header > i.arrowShown {
+  bottom: 0.5em;
+}
+
+@keyframes arrowJump {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
 }

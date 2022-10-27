@@ -106,7 +106,7 @@ class Project extends Component {
             <div className='projEnvImg'>
               {
                 this.props.project.enviorments.map( env => {
-                  return <img key={ this.props.project.id + env.envType } src={ tech(env.envType) } alt='' />
+                  return <img key={ this.props.project.id + env.envType } src={ tech(env.envType) } alt='' width='auto' height='auto' />
                 })
               }
             </div>
@@ -115,7 +115,7 @@ class Project extends Component {
             {
               this.props.project.enviorments.map( env => {
                 return env.technologies.map( tec => {
-                  return <img key={ (this.props.project.id + env.envType + tec) } src={ tech(tec) } alt='' />
+                  return <img key={ (this.props.project.id + env.envType + tec) } src={ tech(tec) } alt='' width='auto' height='auto' />
                 })
               })
             }

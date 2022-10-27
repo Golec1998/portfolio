@@ -111,7 +111,7 @@ class About extends Component {
     return (
       <main id='about'>
         <div id='photo'>
-          <img src={ photo } alt='' />
+          <img src={ photo } alt='' width='auto' height='auto' />
         </div>
         <div id='infoButtons'>
           <button id='selectInfoButton' onClick={this.selectInfo}>Info</button>
