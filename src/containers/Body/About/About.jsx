@@ -61,9 +61,9 @@ class About extends Component {
   editPhotoPosition = () => {
     let y = window.scrollY;
 
-    let main = document.getElementById('main');
-    let mainStyles = window.getComputedStyle(main);
-    let height = (parseFloat(mainStyles['marginTop']) + parseFloat(mainStyles['marginBottom']) + parseFloat(mainStyles['height'])) * 0.8;
+    let header = document.getElementById('header');
+    let headerStyles = window.getComputedStyle(header);
+    let height = (parseFloat(headerStyles['marginTop']) + parseFloat(headerStyles['marginBottom']) + parseFloat(headerStyles['height'])) * 0.8;
 
     if(y < height) {
       let pos = parseInt((y / height) * 50);
@@ -102,7 +102,7 @@ class About extends Component {
 
   render() {
     return (
-      <div id='about'>
+      <main id='about'>
         <div id='photo'>
           <img src={ photo } alt='' />
         </div>
@@ -118,13 +118,13 @@ class About extends Component {
             <div id='skillsBox'>
               {
                 SkillsJSON.map((skill) => {
-                  return <SkillBox skillName={skill.name} skillLvl={skill.lvl} key={skill.id} />
+                  return <SkillBox skillName={ skill.name } skillLvl={ skill.lvl } key={ skill.id } />
                 })
               }
             </div>
           </div>
         </div>
-      </div>
+      </main>
     )
   }
 

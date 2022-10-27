@@ -17,47 +17,47 @@ class Nav extends Component {
   }
 
   scrollTo = (view) => {
-    let main = document.getElementById('main');
+    let header = document.getElementById('header');
     let about = document.getElementById('about');
     let projects = document.getElementById('projects');
 
-    let mainStyles = window.getComputedStyle(main);
+    let headerStyles = window.getComputedStyle(header);
     let aboutStyles = window.getComputedStyle(about);
     let projectsStyles = window.getComputedStyle(projects);
 
-    let mainHeight = (parseFloat(mainStyles['marginTop']) + parseFloat(mainStyles['marginBottom']) + parseFloat(mainStyles['height']));
+    let headerHeight = (parseFloat(headerStyles['marginTop']) + parseFloat(headerStyles['marginBottom']) + parseFloat(headerStyles['height']));
     let aboutHeight = (parseFloat(aboutStyles['marginTop']) + parseFloat(aboutStyles['marginBottom']) + parseFloat(aboutStyles['height']));
     let projectsHeight = (parseFloat(projectsStyles['marginTop']) + parseFloat(projectsStyles['marginBottom']) + parseFloat(projectsStyles['height']));
 
     switch(view) {
-      case 1: window.scrollTo(0, mainHeight); break;
-      case 2: window.scrollTo(0, mainHeight + aboutHeight); break;
-      case 3: window.scrollTo(0, mainHeight + aboutHeight + projectsHeight); break;
+      case 1: window.scrollTo(0, headerHeight); break;
+      case 2: window.scrollTo(0, headerHeight + aboutHeight); break;
+      case 3: window.scrollTo(0, headerHeight + aboutHeight + projectsHeight); break;
       default: break;
     }
   }
 
   componentDidMount() {
     window.addEventListener('scroll', () => {
-      let main = document.getElementById('main');
+      let header = document.getElementById('header');
       let about = document.getElementById('about');
       let projects = document.getElementById('projects');
 
-      let mainStyles = window.getComputedStyle(main);
+      let headerStyles = window.getComputedStyle(header);
       let aboutStyles = window.getComputedStyle(about);
       let projectsStyles = window.getComputedStyle(projects);
 
-      let mainHeight = (parseFloat(mainStyles['marginTop']) + parseFloat(mainStyles['marginBottom']) + parseFloat(mainStyles['height']));
+      let headerHeight = (parseFloat(headerStyles['marginTop']) + parseFloat(headerStyles['marginBottom']) + parseFloat(headerStyles['height']));
       let aboutHeight = (parseFloat(aboutStyles['marginTop']) + parseFloat(aboutStyles['marginBottom']) + parseFloat(aboutStyles['height']));
       let projectsHeight = (parseFloat(projectsStyles['marginTop']) + parseFloat(projectsStyles['marginBottom']) + parseFloat(projectsStyles['height']));
 
       let breakpointValue = 0.75;
 
-      if(window.scrollY > mainHeight + aboutHeight + projectsHeight * breakpointValue)
+      if(window.scrollY > headerHeight + aboutHeight + projectsHeight * breakpointValue)
         this.selectView('contact');
-      else if(window.scrollY > mainHeight + aboutHeight * breakpointValue)
+      else if(window.scrollY > headerHeight + aboutHeight * breakpointValue)
         this.selectView('projects');
-      else if(window.scrollY > mainHeight * breakpointValue)
+      else if(window.scrollY > headerHeight * breakpointValue)
         this.selectView('about');
       else
         this.selectView('x');

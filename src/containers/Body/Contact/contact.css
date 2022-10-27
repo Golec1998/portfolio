@@ -20,14 +20,14 @@ div#contact > div {
   overflow: visible;
 }
 
-div#contact > div#contactInformation {
+div#contact > address#contactInformation {
   height: 25em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-div#contact > div#contactInformation > a.contactInfoBox {
+div#contact > address#contactInformation > a.contactInfoBox {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -35,15 +35,16 @@ div#contact > div#contactInformation > a.contactInfoBox {
   background: var(--dark);
   border-radius: 2.5em;
   text-decoration: none;
+  font-style: normal;
   transition-duration: 0.5s;
   box-shadow: 0 0 2em -0.25em #000c, 0 0 0.3em #fff2 inset;
 }
 
-div#contact > div#contactInformation > a.contactInfoBox:hover {
+div#contact > address#contactInformation > a.contactInfoBox:hover {
   background: var(--accent);
 }
 
-div#contact > div#contactInformation > a.contactInfoBox > img {
+div#contact > address#contactInformation > a.contactInfoBox > img {
   width: 3em;
   margin-right: 1em;
   filter: invert(100%);

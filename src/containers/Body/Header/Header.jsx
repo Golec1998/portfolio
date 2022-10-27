@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 
-import './main.css'
+import './header.css'
 
-class Main extends Component {
+class Header extends Component {
 
   state = {
     header: '>',
     headerLength: 1,
-    h3style: {
+    pstyle: {
       opacity: '0'
     }
   }
@@ -15,7 +15,8 @@ class Main extends Component {
   headerText = '>Paweł Cebula'.split('');
 
   componentDidMount() {
-    if(window.scrollY > 0) {
+    const scrollPosition = window.scrollY;
+    if(scrollPosition > 0) {
       document.getElementById('menu').classList.add('menuShown');
       document.getElementsByTagName('html')[0].style.overflowY = 'scroll';
     }
@@ -25,7 +26,7 @@ class Main extends Component {
         if(this.state.headerLength >= this.headerText.length)
         {
           clearInterval(interval);
-          this.setState({ h3style: { opacity: 1, transition: 'all 2s' } });
+          this.setState({ pstyle: { opacity: 1, transition: 'all 2s' } });
           document.getElementById('menu').classList.add('menuShown');
           document.getElementsByTagName('html')[0].style.overflowY = 'scroll';
         }
@@ -41,13 +42,13 @@ class Main extends Component {
   render() {
 
     return (
-      <div id='main'>
-        <h1>{this.state.header}<span className='blink'>_</span></h1>
-        <h3 style={this.state.h3style}>Web developer</h3>
-      </div>
+      <header id='header'>
+        <h1>{ this.state.header }<span className='blink'>_</span></h1>
+        <p className='subHeader' style={ this.state.pstyle }>Web developer</p>
+      </header>
     )
   }
 
 }
 
-export default Main;
+export default Header;

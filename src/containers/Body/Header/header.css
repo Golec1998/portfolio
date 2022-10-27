@@ -1,19 +1,20 @@
-div#main {
+header#header {
   position: relative;
   display: block;
   width: calc(60vw - 5em);
   margin: 45vh 20vw 45vh calc(20vw + 5em);
 }
 
-div#main > h1,
-div#main > h3 {
+header#header > h1,
+header#header > p.subHeader {
   margin: 0;
+  font-weight: 700;
 }
 
-div#main > h1 {
+header#header > h1 {
   font-size: 4em;
 }
 
-div#main > h3 {
+header#header > p.subHeader {
   font-size: 1.5em;
 }

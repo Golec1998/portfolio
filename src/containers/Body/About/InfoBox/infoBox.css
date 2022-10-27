@@ -1,4 +1,9 @@
-div#about > div#personalBox > div#infoContainer > div#infoBox > p {
-  text-indent: 0.5em;
-  margin: 0.5em 0;
+main#about > div#personalBox > div#infoContainer > div#infoBox > h2 {
+  font-size: 2.5em;
+}
+
+main#about > div#personalBox > div#infoContainer > div#infoBox > p {
+  font-size: 1.2em;
+  text-indent: 1em;
+  margin: 1.5em 0;
 }

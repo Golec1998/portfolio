@@ -1,9 +1,9 @@
-div#about {
+main#about {
   position: relative;
   display: block;
   width: calc(70vw - 5em);
-  height: 50vh;
-  margin: 25vh 15vw 25vh calc(15vw + 5em);
+  height: 70vh;
+  margin: 15vh 15vw 15vh calc(15vw + 5em);
   /* border: solid white 5px; */
   backdrop-filter: blur(0.25em);
   -webkit-backdrop-filter: blur(0.25em);
@@ -12,7 +12,7 @@ div#about {
   background: radial-gradient(ellipse at bottom left, var(--accent), var(--accent-transparent));
 }
 
-div#about > div#photo {
+main#about > div#photo {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -22,22 +22,22 @@ div#about > div#photo {
   transition: all 1s;
 }
 
-div#about > div#photo > img {
+main#about > div#photo > img {
   position: absolute;
   left: calc(15% - 25vh);
   bottom: -5px;
-  max-width: 26em;
-  max-height: 50vh;
+  max-width: 38em;
+  max-height: 65vh;
 }
 
-div#about > div#infoButtons {
+main#about > div#infoButtons {
   position: absolute;
   top: 1.5em;
   right: -100vw;
   transition: all 1s;
 }
 
-div#about > div#infoButtons > button {
+main#about > div#infoButtons > button {
   position: relative;
   display: inline-block;
   border: 0;
@@ -54,12 +54,12 @@ div#about > div#infoButtons > button {
   transition-duration: 0.5s;
 }
 
-div#about > div#infoButtons > button:hover {
+main#about > div#infoButtons > button:hover {
   border-top: 3px solid var(--accent) !important;
   border-bottom: 3px solid var(--accent) !important;
 }
 
-div#about > div#personalBox {
+main#about > div#personalBox {
   position: absolute;
   right: -100vw;
   top: 5em;
@@ -69,7 +69,7 @@ div#about > div#personalBox {
   transition: all 1s;
 }
 
-div#about > div#personalBox > div#infoContainer {
+main#about > div#personalBox > div#infoContainer {
   position: absolute;
   width: 300%;
   top: 0;
@@ -77,7 +77,7 @@ div#about > div#personalBox > div#infoContainer {
   transition: left 0.5s;
 }
 
-div#about > div#personalBox > div#infoContainer > div {
+main#about > div#personalBox > div#infoContainer > div {
   position: relative;
   display: inline-block;
   width: calc(100% / 3);

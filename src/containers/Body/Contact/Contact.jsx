@@ -92,7 +92,7 @@ class Contact extends Component {
 
     return(
       <div id='contact'>
-        <div id='contactInformation'>
+        <address id='contactInformation'>
 
           <ContactInfoBox
             id='emailAddress'
@@ -127,7 +127,7 @@ class Contact extends Component {
             targetName='Golec1998'
           />
 
-        </div>
+        </address>
 
         <div id='contactForm'>
 

@@ -1,6 +1,6 @@
 import React from'react';
 
-import Main from './Main/Main';
+import Header from './Header/Header';
 import About from './About/About';
 import Projects from './Projects/Projects';
 import Contact from './Contact/Contact';
@@ -9,7 +9,7 @@ const Body = () => {
 
     return(
         <div>
-          <Main />
+          <Header />
           <About />
           <Projects />
           <Contact />
