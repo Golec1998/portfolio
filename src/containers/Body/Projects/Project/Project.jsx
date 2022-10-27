@@ -97,7 +97,7 @@ class Project extends Component {
             <div><div></div></div>
           </div>
           <div className='projVideo'>
-            <video className='video' muted loop poster='none' preload='none' autoPlay>
+            <video className='video' muted loop preload='none' autoPlay>
               <source src={ vid(this.props.project.id) } type='video/webm' />
             </video>
           </div>
