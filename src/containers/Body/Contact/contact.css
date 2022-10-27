@@ -15,6 +15,7 @@ div#contact {
   box-shadow: 0 0 2em -0.25em #000c, 0 0 0.3em #fff2 inset;
 }
 
+div#contact > address,
 div#contact > div {
   margin: 2.5em;
   overflow: visible;

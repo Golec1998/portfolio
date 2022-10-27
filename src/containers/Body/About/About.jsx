@@ -10,6 +10,10 @@ import photo from '../../../media/images/photo_alpha.webp'
 
 class About extends Component {
 
+  state = {
+    staticImage: false
+  };
+
   skillsShown = false;
 
   selectInfo = () => {
@@ -65,7 +69,12 @@ class About extends Component {
     let headerStyles = window.getComputedStyle(header);
     let height = (parseFloat(headerStyles['marginTop']) + parseFloat(headerStyles['marginBottom']) + parseFloat(headerStyles['height'])) * 0.8;
 
-    if(y < height) {
+    if(y < height / 4)
+      this.setState({ staticImage: false });
+    if(y > height)
+      this.setState({ staticImage: true });
+
+    if(y < height && !this.state.staticImage) {
       let pos = parseInt((y / height) * 50);
       
       document.getElementById('photo').style.left = `${pos - 50}%`;
@@ -76,8 +85,6 @@ class About extends Component {
       
       document.getElementById('infoButtons').style.right = `calc(5em + ${pos - 50}%)`;
       document.getElementById('infoButtons').style.opacity = `${pos / 100.}`;
-
-      //console.log(pos);
     }
     else {
       document.getElementById('photo').style.left = `0%`;
