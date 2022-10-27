@@ -4,6 +4,7 @@ div.school {
   align-items: center;
   border-top: dashed 1px white;
   margin: 1em 0;
+  padding: 1em 0;
 }
 
 div.school > img {

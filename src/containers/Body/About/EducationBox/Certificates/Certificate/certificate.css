@@ -3,6 +3,7 @@ div.certificate {
   flex-direction: column;
   border-top: dashed 1px white;
   margin: 1em 0;
+  padding: 1em 0;
 }
 
 div.certificate > a > button {
